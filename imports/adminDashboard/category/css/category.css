@@ -1,0 +1,13 @@
+.categoryTable thead{
+	background: #3c8dbc;
+	color: #fff;
+}
+
+.categoryTable{
+    margin-top: 2%;
+}
+
+.dltCategory{
+	color: red;
+	cursor: pointer;
+}

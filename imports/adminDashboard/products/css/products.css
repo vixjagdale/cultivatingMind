@@ -1,0 +1,92 @@
+
+.effectAddress{
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  transition: 0.4s; 
+  background: transparent;
+}
+.effectAddress ~ .focusBorder:before,
+.effectAddress ~ .focusBorder:after{
+  content: ""; position:
+   absolute; top: 0;
+    right: 0;
+     width: 0; 
+     height: 2px;
+      background-color: #3399FF; 
+      transition: 0.2s;
+       transition-delay: 0.2s;
+}
+.effectAddress ~ .focusBorder:after{
+  top: auto;
+   bottom: 0;
+    right: auto; 
+    left: 0;
+     transition-delay: 0.6s;
+}
+.effectAddress ~ .focusBorder i:before,
+.effectAddress ~ .focusBorder i:after{
+  content: ""; 
+  position: absolute;     
+  top: 0;
+   left: 0; 
+   width: 2px; 
+   height: 0; 
+   background-color: #3399FF; 
+   transition: 0.2s;
+ }
+.effectAddress ~ .focusBorder i:after{
+  left: auto;
+   right: 0; 
+   top: auto;
+    bottom: 0; 
+    transition-delay: 0.4s;
+}
+.effectAddress:focus ~ .focusBorder:before,
+.effectAddress:focus ~ .focusBorder:after,
+.has-content.effectAddress ~ .focusBorder:before,
+.has-content.effectAddress ~ .focusBorder:after{
+  width: 100%;
+   transition: 0.2s; 
+   transition-delay: 0.6s;
+ }
+.effectAddress:focus ~ .focusBorder:after,
+.has-content.effectAddress ~ .focusBorder:after{
+  transition-delay: 0.2s;
+}
+.effectAddress:focus ~ .focusBorder i:before,
+.effectAddress:focus ~ .focusBorder i:after,
+.has-content.effectAddress ~ .focusBorder i:before,
+.has-content.effectAddress ~ .focusBorder i:after{
+  height: 100%; 
+  transition: 0.2s;
+}
+.effectAddress:focus ~ .focusBorder i:after,
+.has-conten.effectAddress ~ .focusBorder i:after{
+  transition-delay: 0.4s;
+}
+.effectAddress:focus ~ .addons,
+.has-conten.effectAddress ~ .addons{
+  color : #3399FF;
+}
+
+.effectAddress ~ label{
+     position: absolute;
+    left: 14px;
+    width: 100%;
+    top: 10px;
+    color: #999;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 500;
+ }
+.effectAddress:focus ~ label, .has-content.effectAddress ~ label{
+    top: -28px;
+    left: 0;
+    font-size: 17px;
+    color: #222;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+} 
