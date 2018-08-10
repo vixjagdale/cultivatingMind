@@ -1,0 +1,23 @@
+.photoGalleryTitle {
+    text-transform: uppercase;
+    text-align: center;
+    color: #444;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 1%;
+}
+.photoGalleryMain{
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.photoGalleryDesc{
+	text-align: center;
+	color: #555;
+	font-style: italic;
+	margin-bottom: 2%;
+}
+
+.photoGalleryWrap{
+	max-height: 175px;
+}

@@ -1,0 +1,19 @@
+.countersMain{
+	background: #5bc0de ;
+	padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.counterInner{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.counterNo{
+	font-size: 40px;
+}
+
+.counterInner .fa{
+	font-size: 35px;
+}

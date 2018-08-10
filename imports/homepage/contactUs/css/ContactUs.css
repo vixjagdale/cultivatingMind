@@ -1,0 +1,30 @@
+.contactTitle {
+    text-transform: uppercase;
+    text-align: center;
+    color: #444;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 1%;
+}
+.contactMain{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background: #f6f6fa;
+}
+
+.contactDesc{
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2%;
+}
+
+.contactInput{
+    margin-bottom: 3%;
+}
+
+.btnContactSubmit{
+    background: #5bc0de ;
+    color: #fff;
+    font-weight: bold;
+}

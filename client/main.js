@@ -30,6 +30,10 @@ import '/imports/adminDashboard/category/css/category.css';
 import '/imports/login/css/login.css';
 import '/imports/contactUs/css/mymap.css';
 import '/imports/homepage/contactUsBlock/css/contactUsBlock.css';
+import '/imports/homepage/countersBlock/css/counters.css';
+import '/imports/homepage/photoGallery/css/photoGallery.css';
+import '/imports/homepage/testimonial/css/Testimonial.css';
+import '/imports/homepage/contactUs/css/ContactUs.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 

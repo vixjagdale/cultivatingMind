@@ -1,0 +1,28 @@
+.testimonialWrap{
+	background: #555;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.testimonialDesc{
+	text-align: center;
+	color:#efefef;
+	font-size: 17px; 
+}
+
+.testimonialImg{
+    float: none;
+    margin: 0 auto;
+    height: 85px;
+    width: 85px;
+    /* background: #fff; */
+    border-radius: 100%;
+    margin-bottom: 1%;
+}
+
+.testimonialPersonName{
+	text-align: center;
+	color: #5bc0de;
+	font-weight: bold;
+	font-size: 17px;
+}
