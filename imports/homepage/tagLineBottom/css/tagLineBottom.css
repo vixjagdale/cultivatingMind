@@ -1,0 +1,18 @@
+.tagBottomMain{
+	background: #5bc0de;
+	padding-bottom: 2%;
+	padding-top:2%;
+	text-align: center;
+	color: #efefef;
+}
+
+.tagLineBottom{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.btnTagLine{
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 18px;
+}

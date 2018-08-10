@@ -1,0 +1,24 @@
+.copyrightMain{
+	background: #333;
+	padding-bottom: 1%;
+	padding-top:1%;
+	/*text-align: center;*/
+	color: #666;
+}
+
+.copyright{
+	font-size: 10px;
+	font-weight: bold;
+	/*text-align: left;*/
+}
+
+.btnTagLine{
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 18px;
+}
+
+.copyrightLinks{
+	font-size: 10px;
+	text-align: right;
+}

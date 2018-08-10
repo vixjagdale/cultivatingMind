@@ -34,6 +34,9 @@ import '/imports/homepage/countersBlock/css/counters.css';
 import '/imports/homepage/photoGallery/css/photoGallery.css';
 import '/imports/homepage/testimonial/css/Testimonial.css';
 import '/imports/homepage/contactUs/css/ContactUs.css';
+import '/imports/homepage/tagLineBottom/css/tagLineBottom.css';
+import '/imports/homepage/copyright/css/copyright.css';
+import '/imports/homepage/latestNews/css/latestNews.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 
