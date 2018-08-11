@@ -37,6 +37,8 @@ import '/imports/homepage/contactUs/css/ContactUs.css';
 import '/imports/homepage/tagLineBottom/css/tagLineBottom.css';
 import '/imports/homepage/copyright/css/copyright.css';
 import '/imports/homepage/latestNews/css/latestNews.css';
+import '/imports/homepage/donateTopBlock/css/donateTopBlock.css';
+import '/imports/homepage/ourCases/css/ourCases.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 

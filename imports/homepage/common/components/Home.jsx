@@ -9,6 +9,8 @@ import ContactUs from '/imports/homepage/contactUs/components/ContactUs.jsx';
 import TagLineBottom from '/imports/homepage/tagLineBottom/components/TagLineBottom.jsx';
 import Copyright from '/imports/homepage/copyright/components/Copyright.jsx';
 import LatestNews from '/imports/homepage/latestNews/components/LatestNews.jsx';
+import DonateTopBlock from '/imports/homepage/donateTopBlock/components/DonateTopBlock.jsx';
+import OurCases from '/imports/homepage/ourCases/components/OurCases.jsx';
 
 export default class Home extends TrackeReact(Component){
 
@@ -16,6 +18,8 @@ export default class Home extends TrackeReact(Component){
 			return(
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
 					<HeaderContainer/>
+					<DonateTopBlock/>
+					<OurCases/>
 					<Counters/>
 					<PhotoGallery/>
 					<Testimonial/>
