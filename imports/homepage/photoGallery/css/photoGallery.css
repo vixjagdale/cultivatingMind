@@ -19,5 +19,6 @@
 }
 
 .photoGalleryWrap{
-	max-height: 175px;
+	max-height: 170px;
+	/*margin*/
 }

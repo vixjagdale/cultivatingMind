@@ -39,6 +39,7 @@ import '/imports/homepage/copyright/css/copyright.css';
 import '/imports/homepage/latestNews/css/latestNews.css';
 import '/imports/homepage/donateTopBlock/css/donateTopBlock.css';
 import '/imports/homepage/ourCases/css/ourCases.css';
+import '/imports/homepage/ourVolunteers/css/ourVolunteers.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 

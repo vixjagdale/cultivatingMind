@@ -22,40 +22,40 @@ class PhotoGallery extends TrackeReact(Component){
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery1.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery2.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery3.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery4.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery5.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery6.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery7.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery8.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery9.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery10.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery11.jpg"/>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 noPadLR photoGalleryWrap">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery12.jpg"/>
 						</div>
 					</div>

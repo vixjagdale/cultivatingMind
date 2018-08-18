@@ -1,0 +1,54 @@
+	.volunteerDetails{
+		padding: 0px;
+		font-size: 0px;
+	}
+	.volunteerDetails span{
+		color: #fff;
+    	font-size: 18px;
+    	font-family: fantasy;
+	}
+	.imgVolunteers:hover .volunteerDetails{
+		display: block;
+		position: absolute;
+	    border: 2px solid #5bc0de;
+	    margin-top: 30%;
+	    padding: 20px 15px;
+	    text-align: center;
+	    background: #5bc0de;
+	    opacity: 0.6;
+	    margin-left: 6px;
+	    -webkit-transition: all 500ms ease-in-out;
+	    -moz-transition: all 500ms ease-in-out;
+	    -ms-transition: all 500ms ease-in-out;
+	    -o-transition: all 500ms ease-in-out;
+	    transition: all 500ms ease-in-out;
+	}
+	.WTBVolunteers{
+		background: #aaa;
+	}
+	.WTBVolTit{
+		color: #fff;
+	    font-family: serif;
+	    font-weight: bold;
+	    font-size: 24px;
+	}
+	.BVolTit{
+		font-size: 28px;
+		color: #fff;
+	    font-family: serif;
+	}
+	.BVolTit span{
+		font-size: 28px;
+		color: #000;
+	    font-family: serif;
+	}
+	.WTBVTxtPara{
+		color: #fff;
+    	font-size: 14px;
+	}
+	.WTBVolBtn button{
+		margin-top: 15px !important;
+		background: #fff !important;
+		border: 1px solid #fff !important;
+		color: #555 !important;
+	}

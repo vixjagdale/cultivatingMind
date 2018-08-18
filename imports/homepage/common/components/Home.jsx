@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import HeaderContainer from '/imports/homepage/slideShowBlock/components/Header.jsx';
 import Counters from '/imports/homepage/countersBlock/components/Counters.jsx';
+import WanttobeVolunteers from '/imports/homepage/ourVolunteers/components/WanttobeVolunteers.jsx';
+import OurVolunteers from '/imports/homepage/ourVolunteers/components/OurVolunteers.jsx';
 import PhotoGallery from '/imports/homepage/photoGallery/components/PhotoGallery.jsx';
 import Testimonial from '/imports/homepage/testimonial/components/Testimonial.jsx';
 import ContactUs from '/imports/homepage/contactUs/components/ContactUs.jsx';
@@ -20,6 +22,8 @@ export default class Home extends TrackeReact(Component){
 					<HeaderContainer/>
 					<DonateTopBlock/>
 					<OurCases/>
+					<WanttobeVolunteers/>
+					<OurVolunteers/>
 					<Counters/>
 					<PhotoGallery/>
 					<Testimonial/>

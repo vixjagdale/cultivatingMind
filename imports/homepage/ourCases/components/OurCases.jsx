@@ -37,7 +37,7 @@ class OurCases extends TrackeReact(Component){
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							<img src="../images/cases1.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 							<div className="noPadLR progress col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							  <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="10" aria-valuemax="100">
@@ -59,7 +59,7 @@ class OurCases extends TrackeReact(Component){
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							<img src="../images/cases2.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 							<div className="noPadLR progress col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							  <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="10" aria-valuemax="100">
@@ -81,7 +81,7 @@ class OurCases extends TrackeReact(Component){
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							<img src="../images/cases3.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 							<div className="noPadLR progress col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							  <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="10" aria-valuemax="100">
@@ -103,7 +103,7 @@ class OurCases extends TrackeReact(Component){
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							<img src="../images/cases4.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 							<div className="noPadLR progress col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							  <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="10" aria-valuemax="100">
