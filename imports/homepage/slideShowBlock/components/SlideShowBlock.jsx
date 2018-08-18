@@ -29,6 +29,14 @@ export default class SlideShowBlock extends TrackerReact(Component){
 	render(){
 		return(
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 ecEleHomeWrap">
+				{/*<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 headerLogoBlock">
+					<div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 headerImgBlock">
+						<img src="/images/Cultmind.jpg"/>
+					</div>
+					<div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 headerImgBlock">
+						
+					</div>
+				</div>*/}
 					<HeaderContainer/>
 					<div id="mySlideShow" className="carousel slide ECSlideShow" data-ride="carousel" data-interval="3000">
 					  
@@ -60,13 +68,11 @@ export default class SlideShowBlock extends TrackerReact(Component){
 							return (
 								    <div className={"item "+ activeStatus} key={index}>
 								      <img src={slides.slideImg} className="col-lg-12 col-sm-12 col-md-12 col-xs-12 bannerimg"/>
-								      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 sliderTitles">
-									      <div><h2> {slides.tagLine1}</h2></div>
-									      <div><h3> {slides.tagLine2}</h3></div>
-									      <div><h4> <b>{slides.tagLine3} </b></h4></div>
-									      <div className={"hideotherDetails "+ hideSlideDetail} ><h5> <b>Cash On Delivery </b></h5></div>
-									      <div className={"hideotherDetails "+ hideSlideDetail}><h5> <b>Timing 10 AM TO 7 PM </b></h5></div>
-									      <button className={"btn btn-primary freeDelBtn "+ hideSlideDetail}>Free Delivery </button>
+								      <div className="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12 sliderTitles">
+									      <div className="tagFirst"> {slides.tagLine1}</div>
+									      <div className="tagSecond"> <span>{slides.tagLine2}</span></div>
+									      <div className="tagThird">{slides.tagLine3} </div>
+									      <button className={"btn btn-primary freeDelBtn "+ hideSlideDetail}>Donate Now </button>
 
 								      </div>
 								    </div>
@@ -85,8 +91,8 @@ export default class SlideShowBlock extends TrackerReact(Component){
 					    <span className="sr-only">Next</span>
 					  </a>
 					</div>
-					{/*<CategoryPage/>
-					<TopProductsBlock/>
+					<CategoryPage/>
+					{/*<TopProductsBlock/>
 					<ServicesBlock/>
 					<BrandsBlock/>
 					<ContactUsBlockContainer/>*/}

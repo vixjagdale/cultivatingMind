@@ -61,17 +61,18 @@ li .active{
   background: #fff !important;
 }
 .sliderTitles{
-	text-align: center;
+	/*text-align: center;*/
     position: absolute;
     margin-top: 10%;
     color: #fff;
 
 }
 .freeDelBtn{
-    font-weight: bold;
-    border-radius: 0px !important;
-    padding: 10px 15px;
-    font-size: 16px;
+    border-radius: 6px !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #5bc0de !important;
+    margin-top: 5px;
 }
 .EC-navbar-nav{
 	float: right;
@@ -221,6 +222,23 @@ li .active{
 .productSearch:focus {
     width: 100%;
 }*/
+.tagFirst{
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.tagSecond{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.tagSecond span{
+  background: #5bc0de;
+  padding: 2px 15px;
+}
+.tagThird{
+  line-height: 2;
+}
 
 .search input[type=text] {
     padding: 6px;
