@@ -1,0 +1,31 @@
+.eventsWrap{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.eventsDesc{
+    font-size: 14px;
+    color: #6c6363;
+}
+
+.eventsBlockTitle{
+    font-size: 21px;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.eventsImgs {
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.eventsBlocks{
+    margin-top: 4%;
+}
+
+.eventsReadMore{
+    color: #5bc0de;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: bold;
+}

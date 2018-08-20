@@ -42,6 +42,7 @@ import '/imports/homepage/ourCases/css/ourCases.css';
 import '/imports/homepage/ourVolunteers/css/ourVolunteers.css';
 import '/imports/homepage/makeDonation/css/makeDonation.css';
 import '/imports/homepage/ourMission/css/ourMission.css';
+import '/imports/homepage/events/css/events.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 
