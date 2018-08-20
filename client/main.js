@@ -41,6 +41,7 @@ import '/imports/homepage/donateTopBlock/css/donateTopBlock.css';
 import '/imports/homepage/ourCases/css/ourCases.css';
 import '/imports/homepage/ourVolunteers/css/ourVolunteers.css';
 import '/imports/homepage/makeDonation/css/makeDonation.css';
+import '/imports/homepage/ourMission/css/ourMission.css';
 
 /*--------------------- Image add to s3 ---------------------*/
 

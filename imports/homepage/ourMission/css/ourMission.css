@@ -1,0 +1,33 @@
+.ourMissionWrap{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.ourMissionDesc{
+    font-size: 14px;
+    color: #6c6363;
+}
+
+.ourMissionBlockTitle{
+    font-size: 21px;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.ourMissionImgs {
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 60px;
+    width: 60px;
+}
+
+.ourMissionBlocks{
+    margin-top: 4%;
+}
+
+.ourMissionReadMore{
+    color: #5bc0de;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: bold;
+}

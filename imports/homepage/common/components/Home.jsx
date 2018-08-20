@@ -14,6 +14,7 @@ import LatestNews from '/imports/homepage/latestNews/components/LatestNews.jsx';
 import DonateTopBlock from '/imports/homepage/donateTopBlock/components/DonateTopBlock.jsx';
 import OurCases from '/imports/homepage/ourCases/components/OurCases.jsx';
 import MakeDonation from '/imports/homepage/makeDonation/components/MakeDonation.jsx';
+import OurMission from '/imports/homepage/ourMission/components/OurMission.jsx';
 
 export default class Home extends TrackeReact(Component){
 
@@ -24,6 +25,7 @@ export default class Home extends TrackeReact(Component){
 					<DonateTopBlock/>
 					<OurCases/>
 					<MakeDonation/>
+					<OurMission/>
 					<WanttobeVolunteers/>
 					<OurVolunteers/>
 					<Counters/>
