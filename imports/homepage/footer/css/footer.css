@@ -1,0 +1,102 @@
+.footerOuterWrap {
+    background : rgb(35,43,44);
+    padding: 4% 1%;
+}
+
+
+.footerInnerWrap{
+
+    /*background-image: url('../images/footerBg.png');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #666;
+}
+
+.themeIcon{
+    color: #5bc0de;    
+}
+
+.footerAddrDet{
+    margin-top: 3%;
+}
+
+
+.footerAddr{
+    line-height: 1.62;
+}
+
+.footerNewsTitle {
+    color: #fff;
+    padding-bottom: 2%;
+}
+
+.footerNewsTitle:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 9;
+    background: linear-gradient(to right, #41a3c0 20%, #999 8%);
+}
+
+.footerNewsBlockDates{
+    font-size: 12px;
+}
+
+.footerNewsBlockDesc{
+    color:#dbd3d3;
+}
+
+.footerNewsBlocks{
+    margin-top: 5%;
+}
+
+.footerNewsDesc{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    border-bottom: 1px #3e3a3a dotted;
+}
+
+.footerNewsDesc1{
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-bottom: 1px #3e3a3a dotted;
+}
+
+.footerNewsBlock2,
+.footerNewsBlock3{
+    margin-bottom: 4%;
+}
+
+.footerSubscribe{
+    color: #fff;
+    padding-bottom: 1%;
+}
+
+.subscribeBtnFooter{
+    background-color:#5bc0de !important;  
+    color: #fff;
+    border: 0;
+    font-weight: bold;
+}
+
+.footerCallUs,
+.footerConnect{
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+.footerBottom{
+    padding-top: 4%;
+}
+
+.faIcons {
+    color: #fff !important;
+    background-color: #5bc0de;
+    padding: 4%;
+    margin-right: 6%;
+    border-radius: 100%;
+}

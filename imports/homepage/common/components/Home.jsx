@@ -16,6 +16,7 @@ import OurCases from '/imports/homepage/ourCases/components/OurCases.jsx';
 import MakeDonation from '/imports/homepage/makeDonation/components/MakeDonation.jsx';
 import OurMission from '/imports/homepage/ourMission/components/OurMission.jsx';
 import Events from '/imports/homepage/events/components/Events.jsx';
+import Footer from '/imports/homepage/footer/components/Footer.jsx';
 
 export default class Home extends TrackeReact(Component){
 
@@ -36,6 +37,7 @@ export default class Home extends TrackeReact(Component){
 					<LatestNews/>
 					<ContactUs/>
 					<TagLineBottom/>
+					<Footer/>
 					<Copyright/>
 				</div>
 			);			
