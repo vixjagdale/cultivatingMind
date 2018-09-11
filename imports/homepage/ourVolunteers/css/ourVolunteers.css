@@ -1,6 +1,7 @@
 	.volunteerDetails{
 		padding: 0px;
 		font-size: 0px;
+		display: none;
 	}
 	.volunteerDetails span{
 		color: #fff;

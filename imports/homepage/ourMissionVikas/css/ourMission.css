@@ -1,0 +1,33 @@
+.ourMissionTit span{
+	border-bottom: 2px solid #5bc0de;
+	padding-bottom: 5px;
+	padding: 0px;
+}
+.ourMissionTit{
+	font-size: 18px;
+	text-transform: capitalize;
+	font-family: serif;
+	margin-bottom: 15px;
+}
+.OMnewsDesc{
+	margin-bottom: 15px;
+	padding: 0px;
+}
+.OMSecTit{
+	font-size: 13px;
+    padding: 5px 0px 0px 5px;
+}
+.OMIcons i{
+	font-size: 22px;
+	padding: 5px; 
+}
+.OMnewsSection span{
+	color: #5bc0de;
+}
+.OMFSec{
+	margin-top: 10px;
+	padding-right: 0px;
+}
+.OMSecIn{
+	padding: 0px; 
+}
