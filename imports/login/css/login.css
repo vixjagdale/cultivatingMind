@@ -1,12 +1,12 @@
 .intro{
-    background: linear-gradient(141deg, #0fb8ad 0%, #7d70a7 51%, #197496 75%);
-    min-height: 653px;
+    /*background: linear-gradient(141deg, #0fb8ad 0%, #7d70a7 51%, #197496 75%);*/
+    /*min-height: 653px;*/
 }
 
 .brandName {
     text-align: center;
     font-size: 20px;
-    margin-top: 20%;
+    /*margin-top: 20%;*/
     color: #fff;
     font-weight: bold;
 }
@@ -23,4 +23,15 @@
 	color: #fff;
 	font-size: 22px;
 	padding-top: 1%;
+}
+
+.sysSecurityLogo{
+    float: none;
+    margin: 0 auto;
+}
+
+.cultivatingMindBrandName{
+    text-align: center;
+    color: #44bade;
+    font-size: 30px;
 }

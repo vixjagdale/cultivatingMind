@@ -18,7 +18,7 @@ export default class DashboardSidebar extends TrackerReact(Component) {
 						<section className="sidebar">
 					      <div className="user-panel">
 					        <div className="pull-left image">
-					          <img src="../images/User.png" className="img-circle" alt="User Image" />
+					          <img src="../images/logo.png" className="img-circle" alt="User Image" />
 					        </div>
 					        <div className="pull-left info">
 					          <p className="adminName">Admin</p>

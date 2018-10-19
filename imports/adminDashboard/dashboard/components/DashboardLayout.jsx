@@ -10,9 +10,9 @@ import Login from '/imports/login/components/Login.jsx';
 const DashboardLayout = ({loggingIn, isAdmin, main})=>(
 
 	<div>
-    	{ loggingIn === false ? 
+    	{ loggingIn === true ? 
             <div className="adminDashboard hold-transition skin-blue fixed sidebar-mini">
-                { isAdmin === false ? 
+                { isAdmin === true ? 
         			<div className="wrapper">	
         				<AdminHeader />
         				<DashboardSidebar />
@@ -47,14 +47,14 @@ export default withTracker(props => {
     if(login && Roles.userIsInRole(login, ['admin', 'superAdmin']) ){
     	var loggingIn = true;
         var isAdmin   = true;
-    	// console.log('login and  admin');
+    	console.log('login and admin');
     }else if(login && !Roles.userIsInRole(login, ['admin','superAdmin'])){
     	var loggingIn = true;
         var isAdmin   = false;
         // FlowRouter.go('/unauthorizedAccess');
-    	// console.log('login and no admin');
+    	console.log('login and no admin');
     }else{
-    	// console.log('no login');
+    	console.log('no login');
     	var loggingIn = false;
         var isAdmin   = false;
     }

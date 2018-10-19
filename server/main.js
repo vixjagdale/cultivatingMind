@@ -7,13 +7,10 @@ import '/imports/adminDashboard/slideshow/api/slideshow.js';
 import '/imports/adminDashboard/slideshow/api/tempLogoImage.js';
 import '/imports/contactUs/api/contactUs.js';
 import '/imports/homepage/ourMission/api/ourMission.js';
+import '/imports/login/api/userAccounts.js';
 
 import './slingshot.js';
 	
 import '/imports/adminDashboard/products/api/ClientImageCall.js';
 import {ProjectSettings} from '/imports/adminDashboard/products/api/projectSettings.js';
-// import {ProductImage} from '/imports/adminDashboard/products/components/ProductImage.js';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});

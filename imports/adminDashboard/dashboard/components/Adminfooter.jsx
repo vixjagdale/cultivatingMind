@@ -11,7 +11,7 @@ export default class AdminHeader extends TrackerReact(Component) {
 				    <div className="pull-right hidden-xs">
 				      <b>Version</b> 1.0.0
 				    </div>
-				    <strong>Copyright &copy; 2018 <a href="#" target="_blank">avaComp</a>.</strong> All rights
+				    <strong>Copyright &copy; 2018 <a href="#" target="_blank">Cultivating Mind</a>.</strong> All rights
 				    reserved.
 				</footer>
 			);

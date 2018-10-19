@@ -4,6 +4,9 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
 export default class Login extends TrackerReact(Component){
 
+	componentDidMount(){
+		$('.intro').css({'height': screen.height + "px"});
+	}
 	userlogin(event){
 		event.preventDefault();
 
@@ -22,7 +25,6 @@ export default class Login extends TrackerReact(Component){
                     });
                 }
             });
-
 	}
 
 	render() {
@@ -34,23 +36,24 @@ export default class Login extends TrackerReact(Component){
 	     	</div>
 		        <div className="inner">
 		            <div className="loginwrappercontent col-lg-6 col-lg-offset-3">
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 brandName">ECSystems LOGIN</div>
+						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12"><img className="img-responsive sysSecurityLogo" src="../images/logo.png"/></div>
+						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 cultivatingMindBrandName">Cultivating Mind Login</div>
 		                <div className="UMlogin col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		                	<div className="break col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 					      	<form id="login" onSubmit={this.userlogin.bind(this)}>
 
 							    <div className="form-group col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-xs-12 col-sm-12 inputContent loginInput">
-									<label className="loginLabel">Email</label>
+									<label className="inputLabel">Email</label>
 									<div className="inputEffect col-xs-12 input-group">
 							        	<span className="input-group-addon addons"><i className="fa fa-user-circle"></i></span>
-							        	<input className="form-control loginLabel effectAddress UMname" type="text" ref="loginusername" name="loginusername"/>
+							        	<input className="form-control effectAddress UMname" type="text" ref="loginusername" name="loginusername"/>
 							        </div>
 							    </div>
 							    <div className="form-group col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-xs-12 col-sm-12 inputContent">
-								    <label className="loginLabel">Password</label>
+								    <label className="inputLabel">Password</label>
 								    <div className="inputEffect col-xs-12 input-group passwordOuterBlock">
 							        	<span className="input-group-addon addons"><i className="fa fa-key" aria-hidden="true"></i></span>
-							        	<input className="form-control loginLabel effectAddress UMname" type="password" ref="loginPassword" name="loginPassword"/> 
+							        	<input className="form-control effectAddress UMname" type="password" ref="loginPassword" name="loginPassword"/> 
 		                     	        
 							        </div>
 							    </div>

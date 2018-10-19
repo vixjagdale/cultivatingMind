@@ -16,7 +16,7 @@ export default class AdminHeader extends TrackerReact(Component) {
 					    	<header className="main-header">
 					    		<a href="" className="logo">
 							      <span className="logo-mini"><img src="/images/carIcon1.png" className="img-responsive"/></span>
-							      <span className="logo-lg"><b>EC Systems</b></span>
+							      <span className="logo-lg"><b>Cultivating Mind</b></span>
 							    </a>
 
 							    <nav className="navbar navbar-static-top">
