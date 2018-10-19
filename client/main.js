@@ -40,11 +40,16 @@ import '/imports/homepage/latestNews/css/latestNews.css';
 import '/imports/homepage/donateTopBlock/css/donateTopBlock.css';
 import '/imports/homepage/ourCases/css/ourCases.css';
 import '/imports/homepage/ourVolunteers/css/ourVolunteers.css';
+<<<<<<< Updated upstream
 import '/imports/homepage/makeDonation/css/makeDonation.css';
 import '/imports/homepage/ourMission/css/ourMission.css';
 import '/imports/homepage/events/css/events.css';
 import '/imports/homepage/footer/css/footer.css';
 import '/imports/adminDashboard/countersBlock/css/CountersAdmin.css';
+=======
+import '/imports/homepage/ourMission/css/ourMission.css';
+import '/imports/homepage/upcomingEvents/css/upcomingEvents.css';
+>>>>>>> Stashed changes
 
 /*--------------------- Image add to s3 ---------------------*/
 
