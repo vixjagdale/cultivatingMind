@@ -75,9 +75,9 @@ class CountersAdmin extends TrackeReact(Component){
 
 	render(){
 			return(
-					<section className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+					<section className="content">
 				        <div className="row">
-				          <div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				          <div className="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				            <div className="box box-primary">
 				              <div className="box-header with-border">
 				              <h2 className="formTitle">Counters</h2>

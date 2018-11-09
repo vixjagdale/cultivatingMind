@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import HeaderContainer from '/imports/homepage/slideShowBlock/components/Header.jsx';
-import Counters from '/imports/homepage/countersBlock/components/Counters.jsx';
+import CountersBlock from '/imports/homepage/countersBlock/components/Counters.jsx';
 import WanttobeVolunteers from '/imports/homepage/ourVolunteers/components/WanttobeVolunteers.jsx';
 import OurVolunteers from '/imports/homepage/ourVolunteers/components/OurVolunteers.jsx';
 // import OurMission from '/imports/homepage/ourMission/components/OurMission.jsx';
@@ -34,7 +34,7 @@ export default class Home extends TrackeReact(Component){
 					<Events/>
 					<WanttobeVolunteers/>
 					<OurVolunteers/>
-					<Counters/>
+					<CountersBlock/>
 					<PhotoGallery/>
 					<Testimonial/>
 					<LatestNews/>

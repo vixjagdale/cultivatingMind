@@ -1,0 +1,27 @@
+.adminSubmitBtn{
+    margin-top: 3%;
+}
+
+.btnSubmit{
+	background: #5bc0de;
+	color: #fff;
+}
+
+.adminFormAddonIcon{
+	color: #5bc0de;
+}
+
+.tableHeader{
+	background: #5bc0de;
+	color: #fff;
+}
+
+.tableTitle,
+.formTitle{
+	color: #5bc0de;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 2;
+    font-size: 25px;
+}

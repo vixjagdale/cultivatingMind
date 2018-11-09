@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import { PhotoAlbum } from '/imports/adminDashboard/photoGallery/api/PhotoAlbum.js';
 
 class PhotoGallery extends TrackeReact(Component){
 
@@ -19,44 +20,44 @@ class PhotoGallery extends TrackeReact(Component){
 						PHOTO GALLERY
 					</div>
 					<div className="col-lg-4 col-lg-offset-4 col-md-12 col-sm-12 col-xs-12 photoGalleryDesc">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						{this.props.post.description}
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery1.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md1.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery2.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md2.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery3.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md3.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery4.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md4.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery5.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md5.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery6.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md6.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery7.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md7.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery8.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md8.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery9.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md9.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery10.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md10.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery11.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md11.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery12.jpg"/>
+							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md12.jpg"/>
 						</div>
 					</div>
 				</div>
@@ -69,13 +70,12 @@ export default withTracker(props => {
   // Do all your reactive data access in this method.
   // Note that this subscription will get cleaned up when your component is unmounted
 
-    // const postHandle   = Meteor.subscribe('findSettings');
-    // const post         = Settings.findOne({"companyId":101})||{};
-    // const loading      = !postHandle.ready();
+    const postHandle   = Meteor.subscribe('GalleryPhotos');
+    const post         = PhotoAlbum.findOne({"id":101})||{};
+    const loading      = !postHandle.ready();
 
     return {
-        // loading,
-        // post,
-        'x' : 1,
+        loading,
+        post,
     };
 })(PhotoGallery);

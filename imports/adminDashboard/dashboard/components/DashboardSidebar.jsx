@@ -35,7 +35,7 @@ export default class DashboardSidebar extends TrackerReact(Component) {
 					        </li>
 
 					        <li className="treeview">
-					          <a href="/ecsystemAdminDashboard">
+					          <a href="/cultivatingMindAdmin">
 					            <i className="fa fa-dashboard"></i> <span>Dashboard</span>
 					          </a>
 					        </li>
@@ -43,74 +43,17 @@ export default class DashboardSidebar extends TrackerReact(Component) {
 					        <li className="treeview">
 					          <a href="#">
 					            <i className="fa fa-pie-chart" aria-hidden="true"></i>
-					            <span>Categories</span>
+					            <span>Form Entry</span>
 					            <span className="pull-right-container">
 					              <i className="fa fa-angle-left pull-right"></i>
 					            </span>
 					          </a>
 					          <ul className="treeview-menu">
-					            <li><a href="/addNewProductCategory"><i className="fa fa-circle-o"></i>Add New Category</a></li>  
-					          </ul>
-					        </li>
-
-					        <li className="treeview">
-					          <a href="#">
-					            <i className="fa fa-pie-chart" aria-hidden="true"></i>
-					            <span>Brands</span>
-					            <span className="pull-right-container">
-					              <i className="fa fa-angle-left pull-right"></i>
-					            </span>
-					          </a>
-					          <ul className="treeview-menu">
-					            <li><a href="/addNewBrand"><i className="fa fa-circle-o"></i>Add New Brand</a></li>  
-					          </ul>
-					        </li>
-
-					        <li className="treeview">
-					          <a href="#">
-					            <i className="fa fa-pie-chart" aria-hidden="true"></i>
-					            <span>Slideshow</span>
-					            <span className="pull-right-container">
-					              <i className="fa fa-angle-left pull-right"></i>
-					            </span>
-					          </a>
-					          <ul className="treeview-menu">
-					            <li><a href="/addNewSlide"><i className="fa fa-circle-o"></i>Add New Slide</a></li>  
-					          </ul>
-					        </li>
-
-					        <li className="treeview">
-					          <a href="#">
-					            <i className="fa fa-product-hunt" aria-hidden="true"></i>
-					            <span>Products</span>
-					            <span className="pull-right-container">
-					              <i className="fa fa-angle-left pull-right"></i>
-					            </span>
-					          </a>
-					          <ul className="treeview-menu">
-					            <li><a href="/featuredProducts"><i className="fa fa-circle-o"></i> Featured Products</a></li>
-					            <li><a href="/viewAllProducts"><i className="fa fa-circle-o"></i> Product List</a></li>
-					            <li><a href="/addNewProducts"><i className="fa fa-circle-o"></i>Add New Product</a></li>
-					            <li><a href="/BulkUploadProducts"><i className="fa fa-circle-o"></i>Bulk Upload Products</a></li>
-					            
-					            
-					          </ul>
-					        </li>
-
-					        <li className="treeview">
-					          <a href="#">
-					            <i className="fa fa-cubes" aria-hidden="true"></i>
-					            <span>Services</span>
-					            <span className="pull-right-container">
-					              <i className="fa fa-angle-left pull-right"></i>
-					            </span>
-					          </a>
-					          <ul className="treeview-menu">
-					            <li><a href="/featuredServices"><i className="fa fa-circle-o"></i> Featured Services</a></li>
-					            <li><a href="/viewAllServices"><i className="fa fa-circle-o"></i> Services List</a></li>
-					            <li><a href="/addNewService"><i className="fa fa-circle-o"></i>Add New Service</a></li>
-					            <li><a href="/BulkUploadServices"><i className="fa fa-circle-o"></i>Bulk Upload Services</a></li>
-					            
+					            <li><a href="/counters"><i className="fa fa-circle-o"></i>Counters</a></li>  
+					            <li><a href="/photogallery"><i className="fa fa-circle-o"></i>Photo Gallery</a></li>  
+					            <li><a href="/testimonials"><i className="fa fa-circle-o"></i>Testimonials</a></li>  
+					            <li><a href="/news"><i className="fa fa-circle-o"></i>Latest News</a></li>  
+					            <li><a href="/volunteersForm"><i className="fa fa-circle-o"></i>Volunteers</a></li>  
 					          </ul>
 					        </li>
 
@@ -124,11 +67,6 @@ export default class DashboardSidebar extends TrackerReact(Component) {
 					          <a href="/enquiries">
 					            <i className="fa fa-comment"></i> <span>Enquiries</span>
 					          </a>
-					        </li>
-
-					        <li className="treeview">
-					          <a href="/companySettings">
-					            <i className="fa fa-cogs"></i>Company Settings</a>
 					        </li>
 
 					        <li className="treeview">

@@ -38,7 +38,7 @@ harrison:papa-parse
 dburles:google-maps 
 patrickml:swal
 pfafman:plivo
-jquery
+#jquery
 summernote:summernote
 momentjs:moment
 http@1.4.1

@@ -1,5 +1,7 @@
 import '/imports/adminDashboard/category/api/category.js';
+import '/imports/adminDashboard/photoGallery/api/PhotoAlbum.js';
 import '/imports/adminDashboard/products/api/products.js';
+import '/imports/adminDashboard/testimonial/api/TestimonialAdmin.js';
 import '/imports/adminDashboard/services/api/services.js';
 import '/imports/adminDashboard/companySettings/api/companySettings.js';
 import '/imports/adminDashboard/brands/api/brands.js';
