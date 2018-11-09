@@ -1,8 +1,10 @@
 import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
+import { withTracker } from 'meteor/react-meteor-data';
+import { MissionData } from '/imports/adminDashboard/mission/api/MissionAdmin.js';
 
-export default class OurMission extends TrackeReact(Component){
+class OurMission extends TrackeReact(Component){
 
 	constructor(props){
 		super(props);
@@ -17,25 +19,26 @@ export default class OurMission extends TrackeReact(Component){
 		return(
 				<div className="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 ourMissionWrap">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mkDonationHeader noPadLR">
-						Our Mission
+						{this.props.post.tagLine}
 					</div>
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
 						<hr className="customHr"/>
 					</div>
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionDesc">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						{this.props.post.description}
 					</div>
-					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
-						<img src="../images/ourMission1.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
-						<span className="ourMissionBlockTitle">Shelter for Poor</span><br/>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-							Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</div>	
-					</div>
-					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
+					{ this.props.posts.map( (data,index)=>{
+					return(<div key={index} className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
+							<img src="../images/ourMission1.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
+							<span className="ourMissionBlockTitle">{data.title}</span><br/>
+							{data.missionDesc}
+							<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
+								Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+							</div>	
+						</div>);
+					})
+					}
+{/*					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
 						<img src="../images/ourMission2.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
 						<span className="ourMissionBlockTitle">Help Poor Children </span><br/>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -58,8 +61,27 @@ export default class OurMission extends TrackeReact(Component){
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
 							Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</div>	
-					</div>
+					</div>*/}
 				</div>
 		);
 	}
 }
+
+export default withTracker(props => {
+  // Do all your reactive data access in this method.
+  // Note that this subscription will get cleaned up when your component is unmounted
+
+    const postHandle   = Meteor.subscribe('allMissions');
+    const post         = MissionData.findOne({"id":101})||{};
+    const posts        = MissionData.find({ id: { $ne : 101 } }).fetch() ||[];
+    const loading      = !postHandle.ready();
+
+    // console.log('post:',post);
+    // console.log('posts:',posts);
+
+    return {
+        loading,
+        post,
+        posts,
+    };
+})(OurMission);
