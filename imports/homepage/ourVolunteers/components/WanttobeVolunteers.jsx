@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import { WantToBeVolunteerData } from '/imports/adminDashboard/wantToBeVolunteer/api/WantToBeVolunteer.js';
 
 class WanttobeVolunteers extends TrackeReact(Component){
 
@@ -20,14 +21,14 @@ class WanttobeVolunteers extends TrackeReact(Component){
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolunteers">
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 newTopHeader">
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolTit">
-							Want to be a Volunteer ?
+							{this.props.post.tagLine}
 						</div>
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 BVolTit">
-							BECOME A PROUD <span>VOLUNTEER</span>
+							{this.props.post.title1} <span>{this.props.post.title2}</span>
 						</div>
 						<div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 WTBVTxtPara">
 							<span>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								{this.props.post.description}
 							</span>
 						</div>
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolBtn">
@@ -44,13 +45,12 @@ export default withTracker(props => {
   // Do all your reactive data access in this method.
   // Note that this subscription will get cleaned up when your component is unmounted
 
-    // const postHandle   = Meteor.subscribe('findSettings');
-    // const post         = Settings.findOne({"companyId":101})||{};
-    // const loading      = !postHandle.ready();
+    const postHandle   = Meteor.subscribe('wantToBeVolunteer');
+    const post         = WantToBeVolunteerData.findOne({"id":101})||{};
+    const loading      = !postHandle.ready();
 
     return {
-        // loading,
-        // post,
-        'x' : 1,
+        loading,
+        post,
     };
 })(WanttobeVolunteers);

@@ -54,6 +54,10 @@ export default class DashboardSidebar extends TrackerReact(Component) {
 					            <li><a href="/testimonials"><i className="fa fa-circle-o"></i>Testimonials</a></li>  
 					            <li><a href="/news"><i className="fa fa-circle-o"></i>Latest News</a></li>  
 					            <li><a href="/volunteersForm"><i className="fa fa-circle-o"></i>Volunteers</a></li>  
+					            <li><a href="/wantToBeVolunteerForm"><i className="fa fa-circle-o"></i>Want To Be Volunteer</a></li>  
+					            <li><a href="/topTagLineBlockForm"><i className="fa fa-circle-o"></i>Top Tag-line Block</a></li>  
+					            <li><a href="/bottomTagLineBlockForm"><i className="fa fa-circle-o"></i>Bottom Tag-line Block</a></li>  
+					            <li><a href="/slideShow"><i className="fa fa-circle-o"></i>Slide Show</a></li>  
 					          </ul>
 					        </li>
 

@@ -9,6 +9,7 @@ import '/imports/adminDashboard/slideshow/api/slideshow.js';
 import '/imports/adminDashboard/slideshow/api/tempLogoImage.js';
 import '/imports/contactUs/api/contactUs.js';
 import '/imports/homepage/ourMission/api/ourMission.js';
+import '/imports/homepage/contactUs/api/GetInTouch.js';
 import '/imports/login/api/userAccounts.js';
 
 import './slingshot.js';
