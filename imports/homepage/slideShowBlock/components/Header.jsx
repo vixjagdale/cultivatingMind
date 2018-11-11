@@ -19,31 +19,28 @@ class Header extends TrackerReact(Component){
 		return(
 			<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 homeMenuWrap">
 				<nav className="navbar navbar-inverse ECSNavbar">
-				  <div className="container-fluid">
+				  <div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
 				    <div className="navbar-header">
 				      <button type="button" className="navbar-toggle ecSystemBtn" data-toggle="collapse" data-target="#myNavbar">
 				        <span className="icon-bar"></span>
 				        <span className="icon-bar"></span>
 				        <span className="icon-bar"></span> 
 				      </button>
-				      {/*<a className="navbar-brand companyName" href="/">{this.props.post.companyName}</a>*/}
-				      <a className="navbar-brand companyName" href="/">cultivating Mind	</a>
+				      <a className="navbar-brand companyName hidden-lg" href="/">cultivating Mind	</a>
 				    </div>
 				    <div className="collapse navbar-collapse" id="myNavbar">
-				      <ul className="nav navbar-nav EC-navbar-nav col-lg-10 col-md-10 col-sm-12 col-xs-12 navUl" onClick={this.activeClass.bind(this)}>
-				        <li className="active1 active"><a href="/">HOME</a></li>
+				      <ul className="nav navbar-nav EC-navbar-nav" onClick={this.activeClass.bind(this)}>
+				        <li className="active"><a href="/">HOME</a></li>
 				        <li><a href="/features">Features</a></li>
 				        <li><a href="/pages">Pages</a></li> 
 				        <li><a href="/gallery">Gallery</a></li> 
 				        <li><a href="/events">Events</a></li> 
 				        <li><a href="/blogs">Blog</a></li> 
-				        <li className="activePer"><a href="/donateNow">Donate Now</a></li> 
+				        { Roles.userIsInRole(Meteor.userId(), ['admin','superAdmin']) ? <li><a href="/cultivatingMindAdmin">DASHBOARD</a></li> : '' }
 				        <li className="activePer"><a href="/joinUs">Join Us</a></li> 
-				        { Roles.userIsInRole(Meteor.userId(), ['admin']) ? <li><a href="/ecsystemAdminDashboard">DASHBOARD</a></li> : '' }
-				      </ul>
-				      <ul className="nav navbar-nav navbar-right">
-				       {/*} <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				        <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>*/}
+				        <li className="activePer"><a href="/donateNow">Donate Now</a></li>
+				        
+				        
 				      </ul>
 				    </div>
 				  </div>

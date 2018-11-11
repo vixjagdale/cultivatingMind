@@ -22,17 +22,31 @@
 	/*border-bottom:  1px solid #eee !important;*/
 	border-radius: 0px;
   padding-top: 9px;
-  padding-bottom: 2px;
+  padding-bottom: 9px;
   padding-left: 0px;
   margin-bottom: 0 !important;
 }
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
-	background-color: #fff !important;
-    color: #111 !important;
-    padding: 7px 17px;
+.ECSNavbar .navbar-nav > .active > a, 
+.ECSNavbar .navbar-nav > a, 
+.ECSNavbar .navbar-nav > .active > a:hover, 
+.ECSNavbar .navbar-nav > .active > a:focus{
     font-size: 14px;
     border-radius: 18px;
-    /*margin-top: 8px;*/
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.ECSNavbar .navbar-nav > .active > a,
+.ECSNavbar .navbar-nav > .active > a:hover, 
+.ECSNavbar .navbar-nav > .active > a:focus{
+  background-color: #fff !important;
+  color: #111 !important;
+  font-size: 14px;
+  border-radius: 18px;
+}
+
+.EC-navbar-nav > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 .activePer{
   background-color: #fff !important;
@@ -45,8 +59,8 @@
 }
 
 .navbar-nav > .activePer a{
-       padding-top: 6px; 
-     padding-bottom: 6px; 
+  padding-top: 6px; 
+  padding-bottom: 6px; 
 }
 .navbar-inverse .navbar-nav > li > a{
 	color: #222;
@@ -75,7 +89,8 @@ li .active{
     margin-top: 5px;
 }
 .EC-navbar-nav{
-	float: right;
+	/*float: right;*/
+  width: 100%;
 }
 .categoryImg{
 	background-image: url('/img/slide3.jpg');
@@ -202,6 +217,10 @@ li .active{
 
 #myNavbar li>a:focus{
 	color: #555 !important;
+}
+
+#myNavbar{
+  /*width: 100%;*/
 }
 
  /*.productSearch{
