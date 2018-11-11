@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import { UpcomingEventsData } from '/imports/adminDashboard/upcomingEvents/api/UpcomingEvents.js';
 
 class UpcomingEvents extends TrackeReact(Component){
 
@@ -104,16 +105,17 @@ class UpcomingEvents extends TrackeReact(Component){
 }
 
 export default withTracker(props => {
-  // Do all your reactive data access in this method.
-  // Note that this subscription will get cleaned up when your component is unmounted
+    const postHandle   = Meteor.subscribe('allUpcomingEvents');
+    const post         = UpcomingEventsData.findOne({"id":101})||{};
+    const posts        = UpcomingEventsData.find({ id: { $ne : 101 } }).fetch() ||[];
+    const loading      = !postHandle.ready();
 
-    // const postHandle   = Meteor.subscribe('findSettings');
-    // const post         = Settings.findOne({"companyId":101})||{};
-    // const loading      = !postHandle.ready();
+    console.log('post: ',post);
+    console.log('posts: ',posts);
 
     return {
-        // loading,
-        // post,
-        'x' : 1,
+        loading,
+        post,
+        posts,
     };
 })(UpcomingEvents);
