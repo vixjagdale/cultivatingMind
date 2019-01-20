@@ -108,6 +108,29 @@ class UpcomingEventsAdmin extends TrackeReact(Component){
 		    },()=>{});
 	}
 
+	uploadEventImage(event){
+	    // event.preventDefault();
+	    let self = this;
+	    if (event.currentTarget.files && event.currentTarget.files[0]) {
+		    var file = event.currentTarget.files[0];
+		      	if (file) {
+		      	   var fileName  = file.name; 
+		      	 
+		      	     var ext       = fileName.split('.').pop();  
+	                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
+	                        if (file) {   
+		        				addEventImages(file,self);
+			     			}else{           
+			             			 swal("File not uploaded","Something went wrong","error");  
+			                     }     
+	                   	}else{ 
+	                       swal("Please upload file","Only Upload  images format (jpg,png,jpeg)","error");   
+	                    } 
+		    	}
+
+	    }
+	  }
+
 	render(){
 			return(
 					<section className="content">
@@ -172,6 +195,14 @@ class UpcomingEventsAdmin extends TrackeReact(Component){
 													<label>Date</label>
 													<div className="input-group">
 											        	<input type="date" title="Please enter count integer." required className="form-control" ref="eventDate" name="eventDate" value={this.state.eventDate} onChange={this.handleInputChange} required/>
+						                     			<span className="input-group-addon addons"><i className="fa fa-pause-circle-o adminFormAddonIcon"></i></span>
+											        </div>
+												</div>
+
+												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+													<label>Event Photo</label>
+													<div className="input-group">
+											        	<input type="file" title="Please add event photo" className="form-control" ref="eventPhoto" name="eventPhoto" onChange={this.uploadEventImage.bind(this)}/>
 						                     			<span className="input-group-addon addons"><i className="fa fa-pause-circle-o adminFormAddonIcon"></i></span>
 											        </div>
 												</div>

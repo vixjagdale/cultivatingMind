@@ -7,7 +7,7 @@ import {Meteor} from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 import { Tracker } from 'meteor/tracker';
 
-import {ProductImage} from '/imports/adminDashboard/products/components/ProductImage.js';
+// import {ProductImage} from '/imports/adminDashboard/products/components/ProductImage.js';
 
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
@@ -52,70 +52,72 @@ import '/imports/adminDashboard/enquiries/css/Enquiries.css';
 import '/imports/homepage/upcomingEvents/css/upcomingEvents.css';
 
 
-/*--------------------- Image add to s3 ---------------------*/
+// /*--------------------- Image add to s3 ---------------------*/
 
-addProductImgsToS3Function = function(file,self) {
-    uploadInstance = ProductImage.insert({
-      file: file,
-      meta: {
-        locator : self.props.fileLocator,
-        userId  : Meteor.userId() // Optional, used to check on server for file tampering
-      },
-      streams         : 'dynamic',
-      chunkSize       : 'dynamic',
-      allowWebWorkers : true // If you see issues with uploads, change this to false
-    }, false);
+// addEventImages = function(file,self) {
+//     console.log(file);
+//     console.log(self);
+//     uploadInstance = ProductImage.insert({
+//       file: file,
+//       meta: {
+//         // locator : self.props.fileLocator,
+//         userId  : Meteor.userId() // Optional, used to check on server for file tampering
+//       },
+//       streams         : 'dynamic',
+//       chunkSize       : 'dynamic',
+//       allowWebWorkers : true // If you see issues with uploads, change this to false
+//     }, false);
 
-    self.setState({
-        uploading  : uploadInstance, // Keep track of this instance to use below
-        inProgress : true // Show the progress bar now
-    });
+//     self.setState({
+//         uploading  : uploadInstance, // Keep track of this instance to use below
+//         inProgress : true // Show the progress bar now
+//     });
 
-    // These are the event functions, don't need most of them, it shows where we are in the process
-    uploadInstance.on('start', function () {
-    });
+//     // These are the event functions, don't need most of them, it shows where we are in the process
+//     uploadInstance.on('start', function () {
+//     });
 
-    uploadInstance.on('end', function (error, fileObj) {
-    });
+//     uploadInstance.on('end', function (error, fileObj) {
+//     });
 
-    uploadInstance.on('uploaded',  (error, fileObj) => {
-        if(fileObj){
-            // if(productType == "ShopMode"){
-            //     Meteor.call("addShopProductImages",fileObj._id, productId);
-            // }else {
-            //     Meteor.call("addProductImages",fileObj._id, productId);
-            // }
-            // console.log("fileObj._id: ",fileObj._id);
-            // console.log("fileObj._id link: ",(fileObj._id).link());
+//     uploadInstance.on('uploaded',  (error, fileObj) => {
+//         if(fileObj){
+//             // if(productType == "ShopMode"){
+//             //     Meteor.call("addShopProductImages",fileObj._id, productId);
+//             // }else {
+//             //     Meteor.call("addProductImages",fileObj._id, productId);
+//             // }
+//             // console.log("fileObj._id: ",fileObj._id);
+//             // console.log("fileObj._id link: ",(fileObj._id).link());
 
-            Meteor.call("addProductImages",fileObj._id,(error,result)=>{
-            	if(error){
-            		console.log(error);
-            	}else{
-            		console.log("my result=> " +result);
-            	}
-            });
+//             Meteor.call("addProductImages",fileObj._id,(error,result)=>{
+//             	if(error){
+//             		console.log(error);
+//             	}else{
+//             		console.log("my result=> " +result);
+//             	}
+//             });
 
-            // Session.set("addNewProductImage",)
-        }
+//             // Session.set("addNewProductImage",)
+//         }
 
-        self.setState({
-            uploading  : [],
-            progress   : 0,
-            inProgress : false
-        });
-    });
+//         self.setState({
+//             uploading  : [],
+//             progress   : 0,
+//             inProgress : false
+//         });
+//     });
 
-    uploadInstance.on('error', function (error, fileObj) {
-    });
+//     uploadInstance.on('error', function (error, fileObj) {
+//     });
 
-    uploadInstance.on('progress', function (progress, fileObj) {
-        Session.set('imageprogress',progress);
-        self.setState({
-            progress : progress
-        })
-    });
+//     uploadInstance.on('progress', function (progress, fileObj) {
+//         Session.set('imageprogress',progress);
+//         self.setState({
+//             progress : progress
+//         })
+//     });
 
-    uploadInstance.start(); // Must manually start the uploaded
+//     uploadInstance.start(); // Must manually start the uploaded
 
-}
+// }

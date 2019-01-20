@@ -14,6 +14,10 @@ import '/imports/login/api/userAccounts.js';
 
 import './slingshot.js';
 	
-import '/imports/adminDashboard/products/api/ClientImageCall.js';
-import {ProjectSettings} from '/imports/adminDashboard/products/api/projectSettings.js';
+// import '/imports/adminDashboard/products/api/ClientImageCall.js';
+// import {ProjectSettings} from '/imports/adminDashboard/products/api/projectSettings.js';
 
+//========== s3 ============
+import '/imports/s3/api/ClientImageCall.js';
+import {ProjectSettings} from '/imports/s3/api/projectSettings.js';
+import {ProductImage} from '/imports/s3/api/ProductImage.js';

@@ -63,6 +63,29 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 		    },()=>{});
 	}
 
+	addPhotoGalleryImg =(event)=>{
+		let self = this;
+	    if (event.currentTarget.files && event.currentTarget.files[0]) {
+		    var file = event.currentTarget.files[0];
+		    console.log("file -----> ",file);
+		      	if (file) {
+		      	   var fileName  = file.name; 
+		      	 
+		      	     var ext       = fileName.split('.').pop();  
+	                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
+	                        if (file) {   
+		        				addPhotoGalleryImages(file,self);
+			     			}else{           
+			             			 swal("File not uploaded","Something went wrong","error");  
+			                     }     
+	                   	}else{ 
+	                       swal("Please upload file","Only Upload  images format (jpg,png,jpeg)","error");   
+	                    } 
+		    	}
+
+	    }
+	}
+
 	render(){
 			return(
 					<section className="content">
@@ -77,6 +100,10 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 									<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
 
 										<form onSubmit={this.submit.bind(this)}>
+											<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">
+												<label>Photo Gallery Image</label>
+												<input type="file" id="photoGalleryImg" className="col-lg-12 col-md-12 form-control" onChange={this.addPhotoGalleryImg}/>
+											</div>
 											<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">
 												<label>Description</label>
 												<div className="input-group">

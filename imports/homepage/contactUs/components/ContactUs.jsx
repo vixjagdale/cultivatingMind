@@ -11,7 +11,7 @@ class ContactUs extends TrackeReact(Component){
 
 		}
 	}
-
+	
 	submit(event){
 		event.preventDefault();
 		var formValues = {
@@ -46,6 +46,7 @@ class ContactUs extends TrackeReact(Component){
 	}
 
 	render(){
+		console.log("wow");
 			return(
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR contactMain" id="contactMain">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 contactTitle">
