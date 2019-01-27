@@ -1,1 +1,15 @@
-/* CSS declarations go here */
+.volunteerImgs{
+	height: 62px !important;
+    width: 87px !important;
+    margin-top: 6px !important;
+}
+.volunteerTablImg{
+	height: 30px !important;
+    width: 35px !important;
+}
+.volunteerSiteImg{
+	    height: 240px;
+}
+.photoGallerySiteImg{
+	height: 170px;
+}

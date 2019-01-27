@@ -11,6 +11,8 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 		super(props);
 		this.state={
 			description : '',
+			self        : '',
+			file        : '',
 		}
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
@@ -67,14 +69,17 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 		let self = this;
 	    if (event.currentTarget.files && event.currentTarget.files[0]) {
 		    var file = event.currentTarget.files[0];
-		    console.log("file -----> ",file);
 		      	if (file) {
 		      	   var fileName  = file.name; 
 		      	 
 		      	     var ext       = fileName.split('.').pop();  
 	                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
 	                        if (file) {   
-		        				addPhotoGalleryImages(file,self);
+	                        	self.setState({
+	                        		self : self,
+	                        		file : file,
+	                        	})
+		        				// addEventImages(file,self);
 			     			}else{           
 			             			 swal("File not uploaded","Something went wrong","error");  
 			                     }     
@@ -84,6 +89,17 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 		    	}
 
 	    }
+	}
+
+	addGalleryImages = (event)=>{
+		addEventImages(this.state.file,this.state.self);
+		Meteor.call("addPhotoGalleryIMGs",(err,res)=>{
+			if(err){
+				swal("Image not uploaded ","","success"); 
+			}else{
+				swal("Image uploaded successfull","","success");   
+			}
+		});
 	}
 
 	render(){
@@ -100,10 +116,7 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 									<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
 
 										<form onSubmit={this.submit.bind(this)}>
-											<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">
-												<label>Photo Gallery Image</label>
-												<input type="file" id="photoGalleryImg" className="col-lg-12 col-md-12 form-control" onChange={this.addPhotoGalleryImg}/>
-											</div>
+											
 											<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">
 												<label>Description</label>
 												<div className="input-group">
@@ -121,6 +134,15 @@ class PhotoGalleryAdmin extends TrackeReact(Component){
 							 	 	</div>	
 
 							 	 	{/*<PhotoGalleryImgsAdmin />*/}
+
+							 	 	<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">
+										<label>Photo Gallery Image</label>
+										<input type="file" id="photoGalleryImg" className="col-lg-12 col-md-12 form-control" onChange={this.addPhotoGalleryImg}/>
+									</div>
+
+									<div className="col-lg-4 col-lg-offset-4 col-sm-12 col-xs-12 col-md-12 form-group adminSubmitBtn">									
+												<input type="button" value='Add Image' className="btn btnSubmit form-control" onClick={this.addGalleryImages}/>								
+											</div>
 							 	</div>
 						 	</div>
 						 </div>
@@ -136,6 +158,7 @@ export default withTracker(props => {
   // Note that this subscription will get cleaned up when your component is unmounted
     const postHandle = Meteor.subscribe('GalleryPhotos');
     const post       = PhotoAlbum.findOne({"id":101})||{};
+
     // console.log(post);
     const loading    = !postHandle.ready();
 

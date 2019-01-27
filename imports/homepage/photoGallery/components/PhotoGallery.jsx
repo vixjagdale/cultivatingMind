@@ -23,10 +23,13 @@ class PhotoGallery extends TrackeReact(Component){
 						{this.props.post.description}
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md1.jpg"/>
-						</div>
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
+					{this.props.allImages.map((images,index)=>{
+						return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
+							 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
+							 	</div>
+							})
+					}
+						{/*<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md2.jpg"/>
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
@@ -58,7 +61,7 @@ class PhotoGallery extends TrackeReact(Component){
 						</div>
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
 							<img className="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src="../images/gallery-md12.jpg"/>
-						</div>
+						</div>*/}
 					</div>
 				</div>
 			);			
@@ -70,12 +73,16 @@ export default withTracker(props => {
   // Do all your reactive data access in this method.
   // Note that this subscription will get cleaned up when your component is unmounted
 
-    const postHandle   = Meteor.subscribe('GalleryPhotos');
-    const post         = PhotoAlbum.findOne({"id":101})||{};
-    const loading      = !postHandle.ready();
+    const postHandle    = Meteor.subscribe('GalleryPhotos');
+    const postHandle1   = Meteor.subscribe('GalleryPhotosAll');
+    const loading1      = postHandle1.ready();
+    const post          = PhotoAlbum.findOne({"id":101})||{};
+    const allImages     = PhotoAlbum.find({"id":{$not:101}}).fetch();
+    const loading       = !postHandle.ready();
 
     return {
         loading,
         post,
+        allImages,
     };
 })(PhotoGallery);

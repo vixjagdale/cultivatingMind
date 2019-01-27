@@ -5,6 +5,8 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { OurVolunteersData } from '../api/OurVolunteersAdmin.js';
 
+import {TempImage} from '/imports/s3/api/ClientImageCall.js';
+
 class OurVolunteersAdminTable extends TrackerReact(Component) {
 
 	 constructor(props){
@@ -56,7 +58,10 @@ class OurVolunteersAdminTable extends TrackerReact(Component) {
 					<tr key={postData[i]._id}>
 						<td>{i+1}</td>
 						<td>{postData[i].volunteersName}</td>
+						<td><img src={postData[i].volunteersPhoto} className="img-circle volunteerTablImg"/></td>
 						<td>{postData[i].volunteersProfession}</td>
+						<td>{postData[i].volunteersMobile}</td>
+						<td>{postData[i].volunteersEmailId}</td>
 						<td>
 							<button type="button" id={postData[i]._id} onClick={this.editPost.bind(this)} className="fa fa-pencil-square-o editUser" />
 							&nbsp;
@@ -105,7 +110,10 @@ class OurVolunteersAdminTable extends TrackerReact(Component) {
 										<tr className="tableHeader">
 											<th className="borderBottom"> Sr. </th>
 											<th className="borderBottom"> Volunteer's Name </th>
+											<th className="borderBottom"> Volunteer's Photo </th>
 											<th className="borderBottom"> Volunteer's Profession </th>
+											<th className="borderBottom"> Volunteer's Mobile </th>
+											<th className="borderBottom"> Volunteer's EmailId </th>
 											<th className="borderBottom"> Action </th>
 										</tr>
 									</thead>

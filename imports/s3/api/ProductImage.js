@@ -15,7 +15,7 @@ import { ProjectSettings } from './projectSettings.js';
 
 
 var s3Data = ProjectSettings.findOne({"_id":"1"});
-console.log("s3Data --->",s3Data);
+// console.log("s3Data --->",s3Data);
 if(s3Data){
     process.env.S3='{"s3":{"key": "'+ s3Data.key+'", "secret": "'+ s3Data.secret+'", "bucket": "'+ s3Data.bucket +'", "region": "'+s3Data.region+'"}}' ;
     

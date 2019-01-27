@@ -1,4 +1,5 @@
 export const OurVolunteersData = new Mongo.Collection("ourVolunteers");
+import {TempImage} from '/imports/s3/api/ClientImageCall.js';
 
 if(Meteor.isServer){
 	Meteor.publish("allVolunteers", function(){
@@ -39,18 +40,26 @@ Meteor.methods({
 
   'addUpdateVolunteers' : function(formValues) {
   	var newsExist     = OurVolunteersData.findOne({'_id':formValues.id});
+  	var volunteersPhoto = TempImage.findOne({"userId":Meteor.userId()});
+  	TempImage.remove({"userId":Meteor.userId()});
   	if( newsExist){
 	    OurVolunteersData.update({'_id' : formValues.id},
 	    				  {$set:{
-	    					'volunteersName'      : formValues.volunteersName,
-	    					'volunteersProfession'       : formValues.volunteersProfession,
-	    					'updatedAt'    : new Date(),
+	    					'volunteersName'          : formValues.volunteersName,
+	    					'volunteersProfession'    : formValues.volunteersProfession,
+	    					'volunteersMobile'        : formValues.volunteersMobile,
+	    					'volunteersEmailId'       : formValues.volunteersEmailId,
+	    					// 'volunteersPhoto'         : volunteersPhoto.imagePath,
+	    					'updatedAt'               : new Date(),
 	    				}});
 		return 'updated';
   	}else if(!newsExist){
 	    OurVolunteersData.insert({
-	    					'volunteersName'    : formValues.volunteersName,
+	    					'volunteersName'           : formValues.volunteersName,
 	    					'volunteersProfession'     : formValues.volunteersProfession,
+	    					'volunteersMobile'         : formValues.volunteersMobile,
+	    					'volunteersEmailId'        : formValues.volunteersEmailId,
+	    					'volunteersPhoto'          : volunteersPhoto.imagePath,
 	    					'createdAt'  : new Date(),
 	    				});
 	    return 'inserted';

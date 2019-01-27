@@ -28,10 +28,10 @@ if(Meteor.isServer){
 		    var link = ProductImage.findOne({_id:productId}).link();
 		    TempImage.remove({'userId':Meteor.userId()});
 
-		           TempImage.insert({ 
-		                'userId'      : Meteor.userId(),
-		                 'imagePath'   : link,   
-		            });   
+           TempImage.insert({ 
+                'userId'      : Meteor.userId(),
+                 'imagePath'   : link,   
+            });   
 		}
 
 

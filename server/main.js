@@ -12,6 +12,11 @@ import '/imports/homepage/ourMission/api/ourMission.js';
 import '/imports/homepage/contactUs/api/GetInTouch.js';
 import '/imports/login/api/userAccounts.js';
 
+// import '/imports/adminDashboard/products/api/AddInformation.js';
+
+
+
+
 import './slingshot.js';
 	
 // import '/imports/adminDashboard/products/api/ClientImageCall.js';

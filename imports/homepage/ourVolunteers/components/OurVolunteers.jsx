@@ -34,7 +34,7 @@ class OurVolunteers extends TrackeReact(Component){
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
 						{ this.props.posts.map( (data,index)=>{
 						return(<div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-12 imgVolunteers">
-								<img src="../images/volunteer3.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+								<img src={data.volunteersPhoto} className="noPadLR img-responsive volunteerSiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 								<div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 volunteerDetails">
 									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">{data.volunteersName}</span>
 									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">{data.volunteersProfession}</span>
