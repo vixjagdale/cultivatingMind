@@ -1,5 +1,5 @@
 .donateTopWrap {
-    background-image: url(../images/children-306607_1280.jpg);
+    /*background-image: url(../images/children-306607_1280.jpg);*/
     background-size: cover;
     height: 60vh;
     background-repeat: no-repeat;
@@ -40,6 +40,9 @@
 	color: #fff;
 	margin-top: 1%;
 }
+.topBlockDonate2 b{
+    font-size: 16px; 
+}
 
 .donateNow{
     color: #fff;
@@ -48,4 +51,11 @@
     font-size: 15px;
     border-radius: 7px;
     margin-top: 1%;
+}
+.carouselInnerText{
+    margin-top: -370px;
+}
+.topCarouselBlockWrap img{
+    height: 410px !important;
+    padding: 0px;
 }

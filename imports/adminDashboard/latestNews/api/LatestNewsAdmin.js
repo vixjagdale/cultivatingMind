@@ -1,3 +1,5 @@
+import {TempImage} from '/imports/s3/api/ClientImageCall.js';
+
 export const LatestNewsData = new Mongo.Collection("latestNews");
 
 if(Meteor.isServer){
@@ -38,13 +40,22 @@ Meteor.methods({
   },
 
   'addUpdatePost' : function(formValues) {
+  	var LNImg = TempImage.findOne({"userId":Meteor.userId()});
+  	TempImage.remove({"userId":Meteor.userId()});
+
   	var newsExist     = LatestNewsData.findOne({'_id':formValues.id});
   	if( newsExist){
+  		if(!LNImg){
+			var existLNImg = newsExist.lcImg;
+		}else{
+			var existLCImg = LNImg.imagePath
+		}
 	    LatestNewsData.update({'_id' : formValues.id},
 	    				  {$set:{
 	    					'postTitle'      : formValues.postTitle,
 	    					'postDate'       : formValues.postDate,
-	    					'postDescription'  : formValues.postDescription,
+	    					'postDescription': formValues.postDescription,
+	    					'lcImg'          : existLNImg,
 	    					'updatedAt'    : new Date(),
 	    				}});
 		return 'updated';
@@ -53,6 +64,7 @@ Meteor.methods({
 	    					'postTitle'    : formValues.postTitle,
 	    					'postDate'     : formValues.postDate,
 	    					'postDescription': formValues.postDescription,
+	    					'lcImg'          : LNImg.imagePath,
 	    					'createdAt'  : new Date(),
 	    				});
 	    return 'inserted';

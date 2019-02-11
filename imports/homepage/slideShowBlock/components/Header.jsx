@@ -15,6 +15,13 @@ class Header extends TrackerReact(Component){
 		});
 	}
 
+	eventfun=(event)=>{
+		var id = event.target.getAttribute('id');
+		console.log(id);
+		$('html,body').animate({
+			scrollTop: $("#"+id).offset().top},
+			'slow');
+	}
 	render(){
 		return(
 			<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 homeMenuWrap">
@@ -30,7 +37,7 @@ class Header extends TrackerReact(Component){
 				    </div>
 				    <div className="collapse navbar-collapse" id="myNavbar">
 				      <ul className="nav navbar-nav EC-navbar-nav" onClick={this.activeClass.bind(this)}>
-				        <li className="active"><a href="/">HOME</a></li>
+				        {/*<li className="active"><a href="/">HOME</a></li>
 				        <li><a href="/features">Features</a></li>
 				        <li><a href="/pages">Pages</a></li> 
 				        <li><a href="/gallery">Gallery</a></li> 
@@ -38,7 +45,17 @@ class Header extends TrackerReact(Component){
 				        <li><a href="/blogs">Blog</a></li> 
 				        { Roles.userIsInRole(Meteor.userId(), ['admin','superAdmin']) ? <li><a href="/cultivatingMindAdmin">DASHBOARD</a></li> : '' }
 				        <li className="activePer"><a href="/joinUs">Join Us</a></li> 
-				        <li className="activePer"><a href="/donateNow">Donate Now</a></li>
+				        <li className="activePer"><a href="/donateNow">Donate Now</a></li>*/}
+
+				        <li className="active"><a href="/">HOME</a></li>
+				        <li><a onClick={this.eventfun} id="Features1">Features</a></li>
+				        <li><a onClick={this.eventfun} id="Pages1">Pages</a></li> 
+				        <li><a onClick={this.eventfun} id="Gallery11">Gallery</a></li> 
+				        <li><a onClick={this.eventfun} id="Events1">Events</a></li> 
+				        <li><a href="/blog" id="Blog1">Blog</a></li> 
+				        { Roles.userIsInRole(Meteor.userId(), ['admin','superAdmin']) ? <li><a href="/cultivatingMindAdmin">DASHBOARD</a></li> : '' }
+				        <li className="activePer"><a onClick={this.eventfun} id="Joinus1">Join Us</a></li> 
+				        <li className="activePer"><a onClick={this.eventfun}id="DonateNow1">Donate Now</a></li>
 				        
 				        
 				      </ul>

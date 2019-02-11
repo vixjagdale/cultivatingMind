@@ -104,6 +104,27 @@ class LatestNewsAdmin extends TrackeReact(Component){
 		    },()=>{});
 	}
 
+	uploadLNImage=()=>{
+		 // event.preventDefault();
+	    let self = this;
+	    if (event.currentTarget.files && event.currentTarget.files[0]) {
+		    var file = event.currentTarget.files[0];
+		      	if (file) {
+		      	   var fileName  = file.name; 
+		      	    var ext       = fileName.split('.').pop();  
+                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
+                        if (file) {   
+	        				addEventImages(file,self);
+		     			}else{           
+		             			 swal("File not uploaded","Something went wrong","error");  
+		                     }     
+                   	}else{ 
+                       swal("Please upload file","Only Upload  images format (jpg,png,jpeg)","error");   
+                    } 
+		    	}
+	    }
+	}
+
 	render(){
 			return(
 					<section className="content">
@@ -162,34 +183,46 @@ class LatestNewsAdmin extends TrackeReact(Component){
 									<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
 
 										<form onSubmit={this.submitPost.bind(this)}>
+											<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+												<label className="col-lg-6 col-sm-6 col-xs-3 col-md-6 allTimeLabel">Add Image</label>
+												<div className="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+											    <div className="inputEffect col-xs-12 input-group">
+										        	<input className="effectAddress UMname form-control" onChange={this.uploadLNImage} type="file" ref="blogImg" name="blogImg"/>
+								                      <span className="input-group-addon addons"><i className="fa fa-picture-o"></i></span>
+										              <span className="focusBorder">
+										            	<i></i>
+										              </span>
+											    </div>
+												</div>
+											</div>
+											<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">											
+												<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6 noPadLR">
+													<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+														<label>Post Title</label>
+														<div className="input-group">
+												        	<input type="text" title="Please copy icon class from font awesome." required className="form-control" ref="postTitle" name="postTitle" value={this.state.postTitle} onChange={this.handleInputChange}/>
+							                     			<span className="input-group-addon addons"><i className="fa fa-font-awesome adminFormAddonIcon"></i></span>
+												        </div>
+													</div>
 
-											<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6 noPadLR">
-												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
-													<label>Post Title</label>
-													<div className="input-group">
-											        	<input type="text" title="Please copy icon class from font awesome." required className="form-control" ref="postTitle" name="postTitle" value={this.state.postTitle} onChange={this.handleInputChange}/>
-						                     			<span className="input-group-addon addons"><i className="fa fa-font-awesome adminFormAddonIcon"></i></span>
-											        </div>
+													<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+														<label>Post Date</label>
+														<div className="input-group">
+												        	<input type="date" title="Please enter count integer." required className="form-control" ref="postDate" name="postDate" value={this.state.postDate} onChange={this.handleInputChange}/>
+							                     			<span className="input-group-addon addons"><i className="fa fa-pause-circle-o adminFormAddonIcon"></i></span>
+												        </div>
+													</div>
+
 												</div>
 
-												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
-													<label>Post Date</label>
+												<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+													<label>Post Description</label>
 													<div className="input-group">
-											        	<input type="date" title="Please enter count integer." required className="form-control" ref="postDate" name="postDate" value={this.state.postDate} onChange={this.handleInputChange}/>
-						                     			<span className="input-group-addon addons"><i className="fa fa-pause-circle-o adminFormAddonIcon"></i></span>
+											        	<textarea rows="7" cols="50" title="Please enter title." required className="form-control" ref="postDescription" name="postDescription" value={this.state.postDescription} onChange={this.handleInputChange}></textarea>
+						                     			<span className="input-group-addon addons"><i className="fa fa-quote-right adminFormAddonIcon"></i></span>
 											        </div>
 												</div>
-
 											</div>
-
-											<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6">
-												<label>Post Description</label>
-												<div className="input-group">
-										        	<textarea rows="7" cols="50" title="Please enter title." required className="form-control" ref="postDescription" name="postDescription" value={this.state.postDescription} onChange={this.handleInputChange}></textarea>
-					                     			<span className="input-group-addon addons"><i className="fa fa-quote-right adminFormAddonIcon"></i></span>
-										        </div>
-											</div>
-
 											<div className="col-lg-4 col-lg-offset-4 col-sm-12 col-xs-12 col-md-12 form-group adminSubmitBtn">									
 												<input type="submit" value='Submit' className="btn btnSubmit form-control"/>								
 											</div>

@@ -48,6 +48,7 @@ import '/imports/homepage/events/css/events.css';
 import '/imports/homepage/footer/css/footer.css';
 import '/imports/adminDashboard/countersBlock/css/CountersAdmin.css';
 import '/imports/adminDashboard/enquiries/css/Enquiries.css';
+import '/imports/adminDashboard/blog/css/blog.css';
 
 import '/imports/homepage/upcomingEvents/css/upcomingEvents.css';
 

@@ -11,6 +11,7 @@ import '/imports/contactUs/api/contactUs.js';
 import '/imports/homepage/ourMission/api/ourMission.js';
 import '/imports/homepage/contactUs/api/GetInTouch.js';
 import '/imports/login/api/userAccounts.js';
+import '/imports/adminDashboard/blog/api/blogs.js';
 
 // import '/imports/adminDashboard/products/api/AddInformation.js';
 

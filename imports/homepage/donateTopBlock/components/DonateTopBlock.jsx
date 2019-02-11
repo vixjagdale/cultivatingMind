@@ -42,23 +42,29 @@ class DonateTopBlock extends TrackeReact(Component){
 							}else{
 								var activeStatus = '';
 							}
-      						return(<div key={index} className={"item "+activeStatus}>
-								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 donateTopWrap">
-									<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 topBlockDonate">
-										DONATE
-									</div>
-									<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-										<span className="topBlockDonate1">FOR THE POOR CHILDREN</span>
-									</div>
-									<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 topBlockDonate2">
-										<span className="col-lg-5 col-md-12 col-sm-12 col-xs-12 noPadLR"><b>Every day we bring hope to millions of children in the world's
-										hardest places as a sign of God's unconditional love.</b></span>
-									</div>
-									<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-										<button className="btn donateNow">Donate Now</button>
+      						return(
+      							<div key={index} className={"topCarouselBlockWrap item "+activeStatus}>
+      								 <img src={slides.sideimg} alt="Los Angeles" className="col-lg-12"/>
+									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12-8 carouselInnerText">
+										<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 topBlockDonate">
+											{slides.header1}
+										</div>
+										<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
+											<span className="topBlockDonate1">{slides.header2}</span>
+										</div>
+										<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 topBlockDonate2">
+											<span className="col-lg-5 col-md-12 col-sm-12 col-xs-12 noPadLR">
+												<b>
+													{slides.header3}
+												</b>
+											</span>
+										</div>
+										<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
+											<button className="btn donateNow">Donate Now</button>
+										</div>
 									</div>
 								</div>
-							</div>);
+							);
 						  }) 
 						}
 					    </div>
@@ -91,6 +97,7 @@ export default withTracker(props => {
     const postHandle   = Meteor.subscribe('allCarousalSlides');
     const postHandle1  = Meteor.subscribe('topTagLineBlock');
     const post         = TopCarousalData.find({}).fetch()||[];
+    // console.log(post);
     const postData     = TopTagLineBlockData.findOne({})||{};
     const loading      = !postHandle.ready();
     const loading1     = !postHandle1.ready();

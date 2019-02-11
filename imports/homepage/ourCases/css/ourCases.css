@@ -57,3 +57,6 @@
   -webkit-transition: width 1.5s ease-in-out;
   transition: width 1.5s ease-in-out;
 }
+.ocImgWrap img{
+  height: 150px;
+}

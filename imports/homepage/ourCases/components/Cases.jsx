@@ -16,8 +16,8 @@ class Cases extends TrackeReact(Component){
 		});  
 	}
 	render(){
-			return(<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<img src="../images/cases1.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			return(<div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 ocImgWrap">
+				<img src={this.props.data.ourCaseImg} className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 				<div className="noPadLR progress col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				  <div className="progress-bar" role="progressbar" aria-valuenow={parseInt((this.props.data.moneyRaised/this.props.data.goal)*100)} aria-valuemin="10" aria-valuemax="100">
 				     <span  className="popOver" data-toggle="tooltip" data-placement="top" title={parseInt((this.props.data.moneyRaised/this.props.data.goal)*100)+'%'}></span>  
