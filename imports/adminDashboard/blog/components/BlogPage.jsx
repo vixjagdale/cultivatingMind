@@ -47,7 +47,8 @@ class blogPage extends Component{
 export default withTracker(props=>{
 	const postHandle = Meteor.subscribe("showAllBlogs");
 	const loading    = !postHandle.ready();
-	const allBlogs = Blogs.find({}).fetch();
+	const allBlogs = Blogs.find({});
+	// console.log("allBlogs ------>",allBlogs);
 	return{
 		allBlogs,
 	};

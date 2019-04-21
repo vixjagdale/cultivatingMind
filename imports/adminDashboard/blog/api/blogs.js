@@ -19,11 +19,9 @@ Meteor.methods({
 		var blogImg = TempImage.findOne({"userId":Meteor.userId()});
   		TempImage.remove({"userId":Meteor.userId()});
 		if(blogValues.id){
-			if(!blogImg.imagePath){
+			if(!blogImg){
 				var existBlog    = Blogs.findOne({"_id":blogValues.id});
 				var existBlogImg = existBlog.blogImg;
-			}else{
-				var existBlogImg = blogImg.imagePath
 			}
 			Blogs.update({"_id":blogValues.id},
 				{

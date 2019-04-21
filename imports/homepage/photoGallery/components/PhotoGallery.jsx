@@ -15,7 +15,7 @@ class PhotoGallery extends TrackeReact(Component){
 
 	render(){
 			return(
-				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 photoGalleryMain" id="Gallery11">
+				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 photoGalleryMain" id="Gallery111">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 photoGalleryTitle">
 						PHOTO GALLERY
 					</div>

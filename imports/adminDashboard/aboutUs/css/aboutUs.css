@@ -1,0 +1,28 @@
+.aboutUsImg{
+	background: url(/images/gallery-md9.jpg);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+
+}
+.aboutUsWrap{
+	padding: 0px;
+}
+.aboutUsBody{
+	margin-top: 240px;
+    border: 1px solid #eee;
+    min-height: 600px;
+    background: #fff;
+    box-shadow: 0px 0px 18px;
+    padding: 15px 30px 30px 30px;
+}
+.aboutUsBody h1{
+	text-align: center;
+	text-transform: uppercase;
+}
+.aboutUsBody p{
+	margin-top: 20px;
+	font-size: 16px;
+	white-space: pre-line;
+}

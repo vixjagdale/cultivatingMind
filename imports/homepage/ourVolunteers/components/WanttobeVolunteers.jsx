@@ -18,7 +18,7 @@ class WanttobeVolunteers extends TrackeReact(Component){
 	}
 	render(){
 			return(
-				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolunteers">
+				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolunteers" id="Joinus11">
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 newTopHeader">
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 WTBVolTit">
 							{this.props.post.tagLine}

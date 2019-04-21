@@ -26,6 +26,15 @@ export default class SlideShowBlock extends TrackerReact(Component){
 		return SlideShow.find({});
 	}
 
+	eventfunn=(event)=>{
+		var id = event.target.getAttribute('id');
+		console.log('targeted id ',id);
+
+	    $('html,body').aisnimate({
+	        scrollTop: $("#"+id+'1').offset().top},
+	        'slow');
+	}
+
 	render(){
 		return(
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 ecEleHomeWrap">
@@ -72,7 +81,7 @@ export default class SlideShowBlock extends TrackerReact(Component){
 									      <div className="tagFirst"> {slides.tagLine1}</div>
 									      <div className="tagSecond"> <span>{slides.tagLine2}</span></div>
 									      <div className="tagThird">{slides.tagLine3} </div>
-									      <button className={"btn btn-primary freeDelBtn "+ hideSlideDetail}>Donate Now </button>
+									      <button className={"btn btn-primary freeDelBtn "+ hideSlideDetail} onClick={this.eventfunn} id="DonateNow11">Donate Now </button>
 
 								      </div>
 								    </div>

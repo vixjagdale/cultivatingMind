@@ -12,6 +12,7 @@ import '/imports/homepage/ourMission/api/ourMission.js';
 import '/imports/homepage/contactUs/api/GetInTouch.js';
 import '/imports/login/api/userAccounts.js';
 import '/imports/adminDashboard/blog/api/blogs.js';
+import '/imports/adminDashboard/aboutUs/api/aboutUs.js';
 
 // import '/imports/adminDashboard/products/api/AddInformation.js';
 
@@ -27,3 +28,7 @@ import './slingshot.js';
 import '/imports/s3/api/ClientImageCall.js';
 import {ProjectSettings} from '/imports/s3/api/projectSettings.js';
 import {ProductImage} from '/imports/s3/api/ProductImage.js';
+Meteor.startup(function () {
+process.env.MAIL_URL = 'smtp://mailtovikasjagdale:25041992@smtp.sendgrid.net:587';
+});
+
