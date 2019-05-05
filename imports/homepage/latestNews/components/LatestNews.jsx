@@ -31,7 +31,7 @@ class LatestNews extends TrackeReact(Component){
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
 						{ this.props.posts.map( (data,index)=>{
 						return(<div key={index} className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<img src="../images/news1.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+								<img src={data.lcImg} className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 newsBottom">
 									<div className="col-lg-2 col-md-12 col-sm-12 col-xs-12 newsDate noPadLR">
 										<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">{moment(data.postDate, 'YYYY-MM-DD').format('DD')} </div>

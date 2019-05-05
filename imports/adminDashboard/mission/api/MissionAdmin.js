@@ -1,4 +1,6 @@
 export const MissionData = new Mongo.Collection("mission");
+import {TempImage} from '/imports/s3/api/ClientImageCall.js';
+
 
 if(Meteor.isServer){
 	Meteor.publish("allMissions", function(){
@@ -35,19 +37,23 @@ Meteor.methods({
 
   'addUpdateMission' : function(formValues) {
   	var newsExist     = MissionData.findOne({'_id':formValues.id});
+  	var missionPhoto = TempImage.findOne({"userId":Meteor.userId()});
+  	TempImage.remove({"userId":Meteor.userId()});
   	if( newsExist){
 	    MissionData.update({'_id' : formValues.id},
 	    				  {$set:{
-	    					'title'      : formValues.title,
-	    					'missionDesc'       : formValues.missionDesc,
+	    					'title'        : formValues.title,
+	    					'missionDesc'  : formValues.missionDesc,
+	    					'missionPhoto'  : missionPhoto,
 	    					'updatedAt'    : new Date(),
 	    				}});
 		return 'updated';
   	}else if(!newsExist){
 	    MissionData.insert({
-	    					'title'    : formValues.title,
-	    					'missionDesc'     : formValues.missionDesc,
-	    					'createdAt'  : new Date(),
+	    					'title'         : formValues.title,
+	    					'missionDesc'   : formValues.missionDesc,
+	    					'missionPhoto'  : missionPhoto,
+	    					'createdAt'     : new Date(),
 	    				});
 	    return 'inserted';
   	}

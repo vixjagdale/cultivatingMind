@@ -10,7 +10,7 @@ if(Meteor.isServer){
 	Meteor.methods({
 
 	  'saveQueries' : function(formValues) {
-
+	  		var body = 'Dear CultivatingMinds,'+'\n\n'+'Name :'+formValues.name+'\n'+'Mobile Number: '+formValues.phone+'\n'+'\n'+formValues.message;
 		    var id = GetInTouch.insert({
 		    					'name'    : formValues.name,
 		    					'email'    : formValues.email,
@@ -19,12 +19,13 @@ if(Meteor.isServer){
 		    					'message'    : formValues.message,
 		    					'createdAt'  : new Date(),
 		    				});
+		    console.log("formValues ---> ",formValues);
 
 		    Email.send({
-				from: formValues.email,
-				to: "vikasjagdale92@gmail.com",
-				subject: formValues.subject,
-				text: formValues.message
+				from    : formValues.email,
+				to      : "mailtovikasjagdale@gmail.com",
+				subject : formValues.subject,
+				text    : body
 				});	
 		    return id;
 

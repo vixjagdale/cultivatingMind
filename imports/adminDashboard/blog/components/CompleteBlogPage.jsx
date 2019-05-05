@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import {Blogs} from '../api/blogs.js';
+import Events from '/imports/homepage/events/components/Events.jsx';
 
 class CompleteBlogPage extends Component{
 	render(){
@@ -19,6 +20,9 @@ class CompleteBlogPage extends Component{
 								</div>
 								
 							</div>
+						</div>
+						<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 eventBlogWrap">
+							<Events/>
 						</div>
 					</div>
 			</div>

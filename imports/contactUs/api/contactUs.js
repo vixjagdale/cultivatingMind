@@ -1,4 +1,6 @@
 export const ContactUs = new Mongo.Collection("contactUs");
+import { Email } from 'meteor/email';
+
 
 if(Meteor.isServer){
 
@@ -20,5 +22,9 @@ Meteor.methods({
 							          }); 
 	return contactUsId;						          	
   },
+  sendEmail(to, from, subject, text) {
+    Email.send({ to, from, subject, text });
+  }
+
 
 });

@@ -16,7 +16,7 @@ import DonateTopBlock from '/imports/homepage/donateTopBlock/components/DonateTo
 import OurCases from '/imports/homepage/ourCases/components/OurCases.jsx';
 import MakeDonation from '/imports/homepage/makeDonation/components/MakeDonation.jsx';
 import OurMission from '/imports/homepage/ourMission/components/OurMission.jsx';
-import Events from '/imports/homepage/events/components/Events.jsx';
+// import Events from '/imports/homepage/events/components/Events.jsx';
 import Branding from './Branding.jsx';
 import Footer from '/imports/homepage/footer/components/Footer.jsx';
 
@@ -32,7 +32,7 @@ export default class Home extends TrackeReact(Component){
 					<OurCases/>
 					<MakeDonation/>
 					<OurMission/>
-					<Events/>
+					{/* <Events/>*/}
 					<WanttobeVolunteers/>
 					<OurVolunteers/>
 					<CountersBlock/>

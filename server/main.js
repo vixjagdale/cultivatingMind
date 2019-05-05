@@ -28,7 +28,8 @@ import './slingshot.js';
 import '/imports/s3/api/ClientImageCall.js';
 import {ProjectSettings} from '/imports/s3/api/projectSettings.js';
 import {ProductImage} from '/imports/s3/api/ProductImage.js';
+
 Meteor.startup(function () {
-process.env.MAIL_URL = 'smtp://mailtovikasjagdale:25041992@smtp.sendgrid.net:587';
+	process.env.MAIL_URL = 'smtp://mailtovikasjagdale:25041992@smtp.sendgrid.net:587';
 });
 

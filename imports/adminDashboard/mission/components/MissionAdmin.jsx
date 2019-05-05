@@ -98,6 +98,27 @@ class MissionAdmin extends TrackeReact(Component){
 		    },()=>{});
 	}
 
+	uploadOurMissionImage(event){
+		// event.preventDefault();
+	    let self = this;
+	    if (event.currentTarget.files && event.currentTarget.files[0]) {
+		    var file = event.currentTarget.files[0];
+		      	if (file) {
+		      	   var fileName  = file.name; 
+		      	    var ext       = fileName.split('.').pop();  
+                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
+                        if (file) {   
+	        				addEventImages(file,self);
+		     			}else{           
+		             			 swal("File not uploaded","Something went wrong","error");  
+		                     }     
+                   	}else{ 
+                       swal("Please upload file","Only Upload  images format (jpg,png,jpeg)","error");   
+                    } 
+		    	}
+	    }
+	}
+
 	render(){
 			return(
 					<section className="content">
@@ -159,6 +180,19 @@ class MissionAdmin extends TrackeReact(Component){
 											        </div>
 												</div>
 
+											</div>
+
+											<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12 missionFormImageWrap">
+												<label className="col-lg-6 col-sm-6 col-xs-3 col-md-6 allTimeLabel">Add Image</label>
+												<div className="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+											    <div className="inputEffect col-xs-12 input-group">
+										        	<input className="effectAddress UMname form-control" onChange={this.uploadOurMissionImage.bind(this)} type="file" ref="blogImg" name="blogImg"/>
+								                      <span className="input-group-addon addons"><i className="fa fa-picture-o"></i></span>
+										              <span className="focusBorder">
+										            	<i></i>
+										              </span>
+											    </div>
+												</div>
 											</div>
 
 											<div className="col-lg-4 col-lg-offset-4 col-sm-12 col-xs-12 col-md-12 form-group adminSubmitBtn">									

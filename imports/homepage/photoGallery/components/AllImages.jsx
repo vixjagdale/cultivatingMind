@@ -4,7 +4,7 @@ import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { PhotoAlbum } from '/imports/adminDashboard/photoGallery/api/PhotoAlbum.js';
 
-class PhotoGallery extends TrackeReact(Component){
+class AllImages extends TrackeReact(Component){
 
 	constructor(props){
 		super(props);
@@ -13,9 +13,6 @@ class PhotoGallery extends TrackeReact(Component){
 		}
 	}
 
-	goToAllImages=()=>{
-		FlowRouter.go('/allImages');
-	}
 	render(){
 			return(
 				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 photoGalleryMain" id="Gallery111">
@@ -26,21 +23,12 @@ class PhotoGallery extends TrackeReact(Component){
 						{this.props.post.description}
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-					{this.props.allImages.length <=12 ?
-						this.props.allImages.map((images,index)=>{
-							return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-								 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
-								 	</div>
-								})
-						
-					:
-					null
-					}
-					{this.props.allImages.length>=3 ?
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewAllImgBtn">
-							<button className="btn btn-primary" onClick={this.goToAllImages}>View All </button>
-						</div>
-					: null
+					
+					{this.props.allImages.map((images,index)=>{
+						return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
+							 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
+							 	</div>
+							})				
 					}
 					</div>
 				</div>
@@ -65,4 +53,4 @@ export default withTracker(props => {
         post,
         allImages,
     };
-})(PhotoGallery);
+})(AllImages);

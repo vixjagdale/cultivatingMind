@@ -42,28 +42,6 @@ class OurVolunteers extends TrackeReact(Component){
 							    </div>)
 							})
 						}
-{/*							<div className="col-lg-3 col-md-3 col-sm-3 col-xs-12 imgVolunteers">
-								<img src="../images/volunteer4.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
-								<div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 volunteerDetails">
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">stuart Broad</span>
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">Businesman</span>
-
-								</div>
-							</div>
-							<div className="col-lg-3 col-md-3 col-sm-3 col-xs-12 imgVolunteers">
-								<img src="../images/volunteer1.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
-								<div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 volunteerDetails">
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">Michal jackson</span>
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">Businesman</span>
-								</div>
-							</div>
-							<div className="col-lg-3 col-md-3 col-sm-3 col-xs-12 imgVolunteers">
-								<img src="../images/volunteer2.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
-								<div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 volunteerDetails">
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">loren hadly</span>
-									<span className="col-lg-12 col-md-12 col-sm-12 col-xs-12">Doctor</span>
-								</div>
-							</div>*/}
 						</div>
 					</div>
 				</div>

@@ -22,3 +22,8 @@
 	max-height: 170px;
 	/*margin*/
 }
+.viewAllImgBtn{
+	text-align: right;
+    padding: 0px;
+    margin-top: 25px;
+}

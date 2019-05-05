@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { MissionData } from '/imports/adminDashboard/mission/api/MissionAdmin.js';
+import Events from '/imports/homepage/events/components/Events.jsx';
 
 class OurMission extends TrackeReact(Component){
 
@@ -17,51 +18,32 @@ class OurMission extends TrackeReact(Component){
 
 	render(){
 		return(
-				<div className="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 ourMissionWrap">
-					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mkDonationHeader noPadLR">
-						{this.props.post.tagLine}
+				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 ourMissionEventWrap">
+					<div className="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 ourMissionWrap">
+						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mkDonationHeader noPadLR">
+							{this.props.post.tagLine}
+						</div>
+						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
+							<hr className="customHr"/>
+						</div>
+						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionDesc">
+							{this.props.post.description}
+						</div>
+						{ this.props.posts.map( (data,index)=>{
+						return(<div key={index} className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
+								<img src={data.missionPhoto} className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
+								<span className="ourMissionBlockTitle">{data.title}</span><br/>
+								{data.missionDesc}
+								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
+									Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+								</div>	
+							</div>);
+						})
+						}
 					</div>
-					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
-						<hr className="customHr"/>
+					<div className="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 eventsWrap" id="Events11">
+						<Events/>
 					</div>
-					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionDesc">
-						{this.props.post.description}
-					</div>
-					{ this.props.posts.map( (data,index)=>{
-					return(<div key={index} className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
-							<img src="../images/ourMission1.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
-							<span className="ourMissionBlockTitle">{data.title}</span><br/>
-							{data.missionDesc}
-							<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-								Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-							</div>	
-						</div>);
-					})
-					}
-{/*					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
-						<img src="../images/ourMission2.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
-						<span className="ourMissionBlockTitle">Help Poor Children </span><br/>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-							Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</div>	
-					</div>
-					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
-						<img src="../images/ourMission3.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
-						<span className="ourMissionBlockTitle">Funding for Poor</span><br/>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-							Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</div>	
-					</div>
-					<div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
-						<img src="../images/ourMission4.jpg" className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
-						<span className="ourMissionBlockTitle">Reduce Poverty</span><br/>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-							Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</div>	
-					</div>*/}
 				</div>
 		);
 	}

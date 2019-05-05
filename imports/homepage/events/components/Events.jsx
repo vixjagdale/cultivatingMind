@@ -17,7 +17,7 @@ class Events extends TrackeReact(Component){
 
 	render(){
 		return(
-				<div className="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 eventsWrap" id="Events11">
+				<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 eventsWrap">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mkDonationHeader noPadLR">
 						<i className="fa fa-calendar" aria-hidden="true"></i> {this.props.post.tagLine}
 					</div>
@@ -29,7 +29,7 @@ class Events extends TrackeReact(Component){
 					</div>
 					{ this.props.posts.map( (data,index)=>{
 						return(<div key={index} className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR eventsBlocks eventsDesc">
-								<img src="../images/events1.jpg" className="img-responsive col-lg-2 col-md-2 col-sm-2 col-xs-2 noPadLR eventsImgs"/>
+								<img src={data.eventPhoto} className="img-responsive col-lg-2 col-md-2 col-sm-2 col-xs-2 noPadLR eventsImgs"/>
 								<div className="col-lg-8 col-md-12 col-sm-12 col-xs-12 noPadLR">
 									<span className="eventsBlockTitle">{data.eventTitle}</span><br/>
 									<span className="eventsBlockDates">

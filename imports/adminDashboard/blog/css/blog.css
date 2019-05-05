@@ -86,3 +86,9 @@
 .blogWrapper{
   padding: 0px;
 }
+.eventBlogWrap{
+  padding: 0px;
+}
+.eventsWrap .mkDonationHeader{
+  font-size: 18px;
+}

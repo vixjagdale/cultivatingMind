@@ -16,11 +16,20 @@ export default class ContactUsForm extends TrackeReact(Component){
 				console.log(error);
 			}else{
 				console.log(result);
+				Meteor.call(
+				  'sendEmail',
+				  'mailtovikasjagdale@gmail.com',
+				  email,
+				  'Hello from Meteor!',
+				  'This is a test of Email.send.'
+				);
 				this.refs.name.value = '';
 				this.refs.email.value = '';
 				this.refs.subject.value = '';
 				this.refs.message.value = '';
 				swal('Thank you for contacting us!');
+				// Client: Asynchronously send an email.
+				
 			}
 		});
 	}

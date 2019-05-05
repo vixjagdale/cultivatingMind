@@ -30,12 +30,12 @@ class Cases extends TrackeReact(Component){
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12  newsSection">
 						{this.props.data.title}
 					</div>
-					<div className="casesRaised col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
+					{/*<div className="casesRaised col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<b>Raised: ${this.props.data.moneyRaised} </b>
 							<span className="casesGoal">Goal: ${this.props.data.goal}</span>
 						</div>
-					</div>
+					</div>*/}
 				</div>
 			</div>);			
 	}

@@ -1,4 +1,6 @@
 export const UpcomingEventsData = new Mongo.Collection("upcomingEvents");
+import {TempImage} from '/imports/s3/api/ClientImageCall.js';
+
 
 if(Meteor.isServer){
 	Meteor.publish("allUpcomingEvents", function(){
@@ -35,23 +37,28 @@ Meteor.methods({
 
   'addUpdateUpcomingEvents' : function(formValues) {
   	var newsExist     = UpcomingEventsData.findOne({'_id':formValues.id});
+  	var upEventPhoto = TempImage.findOne({"userId":Meteor.userId()});
+  	TempImage.remove({"userId":Meteor.userId()});
+
   	if( newsExist){
 	    UpcomingEventsData.update({'_id' : formValues.id},
 	    				  {$set:{
 	    					'eventTitle'      : formValues.eventTitle,
 	    					'eventDate'       : formValues.eventDate,
-	    					'eventDescription'       : formValues.eventDescription,
-	    					'eventVenue'       : formValues.eventVenue,
-	    					'updatedAt'    : new Date(),
+	    					'eventDescription': formValues.eventDescription,
+	    					'eventVenue'      : formValues.eventVenue,
+	    					'eventPhoto'      : upEventPhoto,
+	    					'updatedAt'       : new Date(),
 	    				}});
 		return 'updated';
   	}else if(!newsExist){
 	    UpcomingEventsData.insert({
-	    					'eventTitle'    : formValues.eventTitle,
-	    					'eventDate'     : formValues.eventDate,
-	    					'eventDescription'     : formValues.eventDescription,
-	    					'eventVenue'     : formValues.eventVenue,
-	    					'createdAt'  : new Date(),
+	    					'eventTitle'       : formValues.eventTitle,
+	    					'eventDate'        : formValues.eventDate,
+	    					'eventDescription' : formValues.eventDescription,
+	    					'eventVenue'       : formValues.eventVenue,
+	    					'eventPhoto'       : upEventPhoto,
+	    					'createdAt'        : new Date(),
 	    				});
 	    return 'inserted';
   	}
