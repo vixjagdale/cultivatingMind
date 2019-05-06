@@ -26,17 +26,14 @@ class PhotoGallery extends TrackeReact(Component){
 						{this.props.post.description}
 					</div>
 					<div className="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-					{this.props.allImages.length <=12 ?
-						this.props.allImages.map((images,index)=>{
-							return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-								 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
-								 	</div>
-								})
-						
-					:
-					null
-					}
-					{this.props.allImages.length>=3 ?
+					
+					{this.props.allImages.map((images,index)=>{
+						return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
+							 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
+							 	</div>
+					})}	
+					
+					{this.props.allImages.length>=12 ?
 						<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewAllImgBtn">
 							<button className="btn btn-primary" onClick={this.goToAllImages}>View All </button>
 						</div>
@@ -57,7 +54,7 @@ export default withTracker(props => {
     const postHandle1   = Meteor.subscribe('GalleryPhotosAll');
     const loading1      = postHandle1.ready();
     const post          = PhotoAlbum.findOne({"id":101})||{};
-    const allImages     = PhotoAlbum.find({"id":{$not:101}},{$sort:{limit:1}}).fetch();
+    const allImages     = PhotoAlbum.find({"id":{$not:101}}, { sort: { }, limit: 12 }).fetch();
     const loading       = !postHandle.ready();
 
     return {
