@@ -26,7 +26,26 @@ class AllImages extends TrackeReact(Component){
 					
 					{this.props.allImages.map((images,index)=>{
 						return  <div key={index} className="col-lg-3 col-md-3 col-sm-3 col-xs-4 noPadLR photoGalleryWrap">
-							 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image}/>
+							 	   <img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" src={images.image} data-toggle="modal" data-target={`#myModal${index}`}/>
+							 	   <div id={`myModal${index}`} className="modal fade" role="dialog">
+									  <div className="modal-dialog modal-lg">
+
+									    <div className="modal-content">
+									      <div className="modal-header">
+									        <button type="button" className="close" data-dismiss="modal">&times;</button>
+									        <h4 className="modal-title">Photos</h4>
+									      </div>
+									      <div className="modal-body">
+							 	   				<img  className="img-responsive photoGallerySiteImg col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR" style={{'height':'400px'}} src={images.image}/>
+									        <p></p>
+									      </div>
+									      <div className="modal-footer">
+									         <button type="button" className="btn btn-default" data-dismiss="modal" style={{'marginTop':'10px'}}>Close</button>
+									      </div>
+									    </div>
+
+									  </div>
+									</div>
 							 	</div>
 							})				
 					}
