@@ -30,6 +30,6 @@ import {ProjectSettings} from '/imports/s3/api/projectSettings.js';
 import {ProductImage} from '/imports/s3/api/ProductImage.js';
 
 Meteor.startup(function () {
-	process.env.MAIL_URL = 'smtp://mailtovikasjagdale:25041992@smtp.sendgrid.net:587';
+	process.env.MAIL_URL = 'smtp://cultivatingminds.org:9860402161@smtp.sendgrid.net:587';
 });
 

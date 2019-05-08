@@ -20,6 +20,7 @@ class OurVolunteersAdmin extends TrackeReact(Component){
 			volunteersProfession : '',
 			volunteersMobile     : '',
 			volunteersEmailId    : '',
+			aboutVolunteers        : '',
 			editVolunteerId : FlowRouter.getParam('volunteerId'),
 		}
 		this.handleInputChange = this.handleInputChange.bind(this);
@@ -36,7 +37,7 @@ class OurVolunteersAdmin extends TrackeReact(Component){
 
 	                volunteersName       : nextProps.postEdit.volunteersName, 
 	                volunteersProfession : nextProps.postEdit.volunteersProfession,  
-
+	                aboutVolunteers        : nextProps.postEdit.aboutVolunteers,
 	                editVolunteerId      : FlowRouter.getParam('volunteerId'),
 	            });
 	        }
@@ -223,6 +224,17 @@ class OurVolunteersAdmin extends TrackeReact(Component){
 											        </div>
 												</div>
 											</div>
+											<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6 noPadLR">
+												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+													<label>About Volunteer </label>
+													<div className="input-group">
+											        	<textarea  name="aboutVolunteers" ref="aboutVolunteers" className="form-control" rows="4" required placeholder="300 characters limit..." value={this.state.aboutVolunteers} onChange={this.handleInputChange}/>
+						                     			<span className="input-group-addon addons"><i className="fa fa-envelope adminFormAddonIcon"></i></span>
+											        </div>
+												</div>
+
+											</div>
+
 											<div className="col-lg-6 col-sm-6 col-xs-6 col-md-6 noPadLR">
 												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
 													<label>Volunteer Email Id</label>

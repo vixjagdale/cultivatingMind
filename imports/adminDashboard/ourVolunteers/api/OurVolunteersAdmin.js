@@ -49,16 +49,20 @@ Meteor.methods({
 	    					'volunteersProfession'    : formValues.volunteersProfession,
 	    					'volunteersMobile'        : formValues.volunteersMobile,
 	    					'volunteersEmailId'       : formValues.volunteersEmailId,
+	    					'aboutVolunteers'        : formValues.aboutVolunteers,
+
 	    					// 'volunteersPhoto'         : volunteersPhoto.imagePath,
 	    					'updatedAt'               : new Date(),
 	    				}});
 		return 'updated';
   	}else if(!newsExist){
+
 	    OurVolunteersData.insert({
 	    					'volunteersName'           : formValues.volunteersName,
 	    					'volunteersProfession'     : formValues.volunteersProfession,
 	    					'volunteersMobile'         : formValues.volunteersMobile,
 	    					'volunteersEmailId'        : formValues.volunteersEmailId,
+	    					'aboutVolunteers'          : formValues.aboutVolunteers,
 	    					'volunteersPhoto'          : volunteersPhoto.imagePath,
 	    					'createdAt'  : new Date(),
 	    				});

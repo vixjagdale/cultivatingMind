@@ -16,3 +16,11 @@
 	border: 2px solid #fff;
 	border-radius: 18px;
 }
+.vol-form-control{
+	text-align: left;
+	padding: 0px;
+	color:#333;
+}
+.modal-title{
+	color:#000;
+}
