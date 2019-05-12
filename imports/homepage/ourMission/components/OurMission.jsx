@@ -33,10 +33,14 @@ class OurMission extends TrackeReact(Component){
 						return(<div key={index} className="col-lg-6 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionBlocks ourMissionDesc">
 								<img src={data.missionPhoto} className="img-responsive col-lg-3 col-md-2 col-sm-2 col-xs-2 noPadLR ourMissionImgs"/>
 								<span className="ourMissionBlockTitle">{data.title}</span><br/>
-								{data.missionDesc}
-								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
-									Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-								</div>	
+								{data.missionDesc.split('').length <30 ? 
+									<span className="eventMissionDesc">{data.missionDesc}</span>
+								:
+									<span className="eventMissionDesc"> {data.missionDesc}
+									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR ourMissionReadMore">
+										<a href={`/ourMissionDetails/${data._id}`}>Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i> </a>
+									</div></span>
+								}	
 							</div>);
 						})
 						}

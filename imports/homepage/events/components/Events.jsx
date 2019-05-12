@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+	import React,{Component} from 'react';
 import { render } from 'react-dom';
 import TrackeReact from 'meteor/ultimatejs:tracker-react';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -34,14 +34,22 @@ class Events extends TrackeReact(Component){
 									<span className="eventsBlockTitle">{data.eventTitle}</span><br/>
 									<span className="eventsBlockDates">
 										<i className="fa fa-calendar" aria-hidden="true"></i>&nbsp;
-										{moment(data.createdAt).format('YYYY MM DD')} |&nbsp;
+										{data.eventDate} |&nbsp;
 										<i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
 										{data.eventVenue}
 									</span><br/>
-									{data.eventDescription}
-									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR eventsReadMore">
-										Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-									</div>	
+									{data.eventDescription.split('').length>25 ? 
+										<span className="eventMissionDesc">
+											{data.eventDescription}
+											<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR eventsReadMore">
+												<a href={`/eventDetails/${data._id}`}> Read More <i className="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+											</div>
+										</span>
+										: 
+										<span className="eventMissionDesc">
+											{data.eventDescription}
+										</span>
+									}	
 								</div>	
 							</div>);
 						   	}) 

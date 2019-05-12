@@ -48,7 +48,7 @@ Meteor.methods({
 	    					'eventDescription': formValues.eventDescription,
 	    					'eventVenue'      : formValues.eventVenue,
 	    					'eventPhoto'      : upEventPhoto,
-	    					'updatedAt'       : new Date(),
+	    					'createdAt'       : new Date(),
 	    				}});
 		return 'updated';
   	}else if(!newsExist){

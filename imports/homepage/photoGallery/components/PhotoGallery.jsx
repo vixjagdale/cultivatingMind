@@ -69,13 +69,13 @@ class PhotoGallery extends TrackeReact(Component){
 export default withTracker(props => {
   // Do all your reactive data access in this method.
   // Note that this subscription will get cleaned up when your component is unmounted
-
+//for commit
     const postHandle    = Meteor.subscribe('GalleryPhotos');
     const postHandle1   = Meteor.subscribe('GalleryPhotosAll');
     const loading1      = postHandle1.ready();
     const post          = PhotoAlbum.findOne({"id":101})||{};
     const allImages     = PhotoAlbum.find({"id":{$not:101}}, { sort: { }, limit: 12 }).fetch();
-    console.log(allImages);
+    // console.log(allImages);
     const loading       = !postHandle.ready();
 
     return {

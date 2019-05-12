@@ -39,59 +39,24 @@ class LatestNews extends TrackeReact(Component){
 									</div>
 									<div className="col-lg-10 col-md-12 col-sm-12 col-xs-12">
 										<b>{data.postTitle}</b><br/>
-										<i className="fa fa-commenting-o themeColor" aria-hidden="true"></i> 214 Comments &nbsp;
-										<i className="fa fa-heart-o themeColor" aria-hidden="true"></i> 895 Likes
+										{/*<i className="fa fa-commenting-o themeColor" aria-hidden="true"></i> 214 Comments &nbsp;
+										<i className="fa fa-heart-o themeColor" aria-hidden="true"></i> 895 Likes*/}
 
 									</div>
 									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR newsSection">
-									{data.postDescription}
-									<br/><br/>
-									Read more <b><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></b>
+									{data.postDescription.split('').length>2 ?
+										<span> {data.postDescription}
+										<br/><br/>
+										<a href={`/latestNewsDetails/${data._id}`}>Read more <b><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></b></a>
+										</span>
+									:
+										<span>{data.postDescription}</span>
+									}
 									</div>
 								</div>
 							</div>);
 					   	}) 
 						}
-{/*							<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<img src="../images/news2.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
-								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 newsBottom">
-									<div className="col-lg-2 col-md-12 col-sm-12 col-xs-12 newsDate noPadLR">
-										<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">28 </div>
-										<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">FEB</div>
-									</div>
-									<div className="col-lg-10 col-md-12 col-sm-12 col-xs-12">
-										<b>POST TITLE HERE</b><br/>
-										<i className="fa fa-commenting-o themeColor" aria-hidden="true"></i> 214 Comments &nbsp;
-										<i className="fa fa-heart-o themeColor" aria-hidden="true"></i> 895 Likes
-
-									</div>
-									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR newsSection">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									<br/><br/>
-									Read more <b><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></b>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<img src="../images/news3.jpg" className="noPadLR img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
-								<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 newsBottom">
-									<div className="col-lg-2 col-md-12 col-sm-12 col-xs-12 newsDate noPadLR">
-										<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">28 </div>
-										<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR">FEB</div>
-									</div>
-									<div className="col-lg-10 col-md-12 col-sm-12 col-xs-12">
-										<b>POST TITLE HERE</b><br/>
-										<i className="fa fa-commenting-o themeColor" aria-hidden="true"></i> 214 Comments &nbsp;
-										<i className="fa fa-heart-o themeColor" aria-hidden="true"></i> 895 Likes
-
-									</div>
-									<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 noPadLR newsSection">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									<br/><br/>
-									Read more <b><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></b>
-									</div>
-								</div>
-							</div>*/}
 						</div>
 
 					</div>
