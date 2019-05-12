@@ -26,7 +26,7 @@ class Testimonial extends TrackeReact(Component){
 								      	{data.description}
 								      </div>
 								      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 testimonialDesc">
-								      	<img src="../images/User.png" className="img-responsive testimonialImg"/>
+								      	<img src={data.testMoniPhoto} className="img-responsive testimonialImg"/>
 								      </div>
 								      <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 testimonialPersonName">
 								      	{data.personName}

@@ -69,6 +69,32 @@ class TestimonialAdmin extends TrackeReact(Component){
 		    },()=>{});
 	}
 
+	AddTestimonialsPhoto=(event)=>{
+			let self = this;
+		    if (event.currentTarget.files && event.currentTarget.files[0]) {
+			    var file = event.currentTarget.files[0];
+			      	if (file) {
+			      	   var fileName  = file.name; 
+			      	 
+			      	     var ext       = fileName.split('.').pop();  
+		                  	if(ext=="jpg" || ext=="png" || ext=="jpeg"){    
+		                        if (file) {   
+		                        	self.setState({
+		                        		self : self,
+		                        		file : file,
+		                        	})
+			        				addEventImages(file,self);
+				     			}else{           
+				             			 swal("File not uploaded","Something went wrong","error");  
+				                     }     
+		                   	}else{ 
+		                       swal("Please upload file","Only Upload  images format (jpg,png,jpeg)","error");   
+		                    } 
+			    	}
+
+		    }
+	}
+
 	render(){
 			return(
 					<section className="content">
@@ -89,6 +115,15 @@ class TestimonialAdmin extends TrackeReact(Component){
 										        	<input type="text" title="Please copy icon class from font awesome." required className="form-control" ref="personName" name="personName" value={this.state.personName} onChange={this.handleInputChange}/>
 					                     			<span className="input-group-addon addons"><i className="fa fa-address-card-o adminFormAddonIcon"></i></span>
 										        </div>
+											</div>
+											<div className="col-lg-6 col-sm-6 col-xs-12 col-md-12 noPadLR">
+												<div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+													<label>Testimonial Person Poto</label>
+													
+											        	<input type="file"  required className="form-control" ref="volunteersPhoto" name="volunteersPhoto" onChange={this.AddTestimonialsPhoto}/>
+						                     			
+												</div>
+
 											</div>
 
 											<div className="col-lg-12 col-sm-4 col-xs-4 col-md-4">

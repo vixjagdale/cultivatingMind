@@ -22,7 +22,6 @@ class LatestNewsDetails extends Component{
 								
 							</div>
 						</div>
-						
 					</div>
 			</div>
 			);
