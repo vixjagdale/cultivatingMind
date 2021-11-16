@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
-    "aws-sdk": "^2.222.1",
+    "aws-sdk": "^2.814.0",
     "babel-runtime": "^6.26.0",
     "bcrypt": "^1.0.3",
     "get-video-id": "^2.1.7",
