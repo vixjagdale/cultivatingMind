@@ -13,7 +13,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "imports": "^1.0.0",
     "jquery": "^2.2.4",
-    "jspdf": "^1.4.1",
+    "jspdf": "^2.5.1",
     "loadjs": "^3.5.1",
     "meteor-node-stubs": "^0.2.11",
     "plivo": "^0.4.2",
